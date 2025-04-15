@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Phone, Menu, MapPin, Award, ChevronDown } from "lucide-react";
+import { Phone, Menu, MapPin, Award, FileText } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -90,10 +90,10 @@ export default function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <button className="bg-blue-400  hover:bg-blue-500 text-white px-4 py-2 flex items-center">
-              Get a free quote
-              <ChevronDown className="ml-2 h-4 w-4" />
-            </button>
+            <Link href="/documents/profile.pdf" target="_blank" className="bg-blue-400  hover:bg-blue-500 text-white px-4 py-2 gap-0.5 flex items-center">
+            <FileText className="ml-2 h-4 w-4" />
+              Download Profile
+            </Link>
           </div>
         </div>
 

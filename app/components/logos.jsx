@@ -22,11 +22,11 @@ const Logos = () => {
             </div>
 
             <div>
-                <img className="object-contain w-auto mx-auto h-14" src="https://cdn.rareblocks.xyz/collection/celebration/images/logos/1/logo-5.png" alt="" />
+                <img className="object-contain w-auto mx-auto h-14" src="/images/fidelity.png" alt="" />
             </div>
 
             <div>
-                <img className="object-contain w-auto mx-auto h-14" src="https://cdn.rareblocks.xyz/collection/celebration/images/logos/1/logo-6.png" alt="" />
+                <img className="object-contain w-auto mx-auto h-14" src="/images/tacbf.png" alt="" />
             </div>
         </div>
     </div>
