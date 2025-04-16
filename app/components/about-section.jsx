@@ -31,24 +31,24 @@ export default function AboutSection() {
 
   const teamMembers = [
     {
-      name: "Vertical Blinds1",
+      name: "Blinds",
     //   role: "Founder & CEO",
-      image: "/images/verticalblinds1.jpeg",
+      image: "/gallery/gallery-2.jpg",
     },
     {
-      name: "Vertical Blinds2",
+      name: "Car Sheds",
     //   role: "Creative Director",
-      image: "/images/verticalblinds2.jpeg",
+      image: "/gallery/car-shed2.jpg",
     },
     {
-      name: "Vertical Blinds",
+      name: "Carpets",
     //   role: "Lead Developer",
-      image: "/images/verticalblinds3.jpeg",
+      image: "/gallery/carpet.jpg",
     },
   ]
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-gradient-to-b from-white to-gray-50 py-24">
+    <section id="about" ref={sectionRef} className="relative overflow-hidden bg-gradient-to-b from-white to-gray-50 py-24">
       {/* Decorative elements */}
       <motion.div
         className="absolute -left-16 -top-16 h-64 w-64 rounded-full bg-primary/5"
@@ -70,8 +70,8 @@ export default function AboutSection() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Our <span className="text-primary">Story</span>
+          <h2 className="text-3xl text-gray-600 font-bold tracking-tight sm:text-4xl md:text-5xl">
+            Our <span className="text-[#56bbf1]">Story</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
             We're a team of passionate creators dedicated to building exceptional digital experiences.
@@ -188,18 +188,7 @@ export default function AboutSection() {
           </motion.div>
         </div>
 
-        {/* Stats counter */}
-        <motion.div
-          className="mt-20 grid grid-cols-2 gap-8 rounded-xl bg-white p-8 shadow-lg sm:grid-cols-4"
-          initial={{ y: 50, opacity: 0 }}
-          animate={isInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
-          transition={{ duration: 0.7, delay: 0.8 }}
-        >
-          <CounterStat value={150} label="Clients" />
-          <CounterStat value={80} label="Projects" />
-          <CounterStat value={27} label="Team Members" />
-          <CounterStat value={12} label="Awards" />
-        </motion.div>
+        
       </div>
     </section>
   )
@@ -210,40 +199,23 @@ function CounterStat({ value, label }) {
   const counterRef = useRef(null)
   const isInView = useInView(counterRef, { once: true })
 
-  return (
-    <div ref={counterRef} className="text-center">
-      <motion.div
-        className="text-3xl font-bold text-primary"
-        initial={{ opacity: 0 }}
-        animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-        transition={{ duration: 0.3 }}
-      >
-        <motion.span
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: 0.3, delay: 0.1 }}
-        >
-          {isInView ? <Counter from={0} to={value} duration={2} /> : "0"}
-        </motion.span>
-        <span>+</span>
-      </motion.div>
-      <p className="text-gray-600">{label}</p>
-    </div>
-  )
+  
 }
 
 // Counter animation component
 function Counter({ from, to, duration = 2 }) {
-  const nodeRef = useRef(null)
-
-  return (
+    return (
     <motion.span
-      ref={nodeRef}
-      initial={{ count: from }}
-      animate={{ count: to }}
-      transition={{ duration, ease: "easeOut" }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
     >
-      {({ count }) => Math.floor(count)}
+      <motion.span
+        initial={{ count: from }}
+        animate={{ count: to }}
+        transition={{ duration, ease: "easeOut" }}
+      >
+        {(value) => Math.floor(value.count)}
+      </motion.span>
     </motion.span>
   )
 }

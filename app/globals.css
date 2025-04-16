@@ -131,11 +131,23 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+@property --scroll-duration {
+  syntax: "<time>";
+  inherits: true;
+  initial-value: 800ms;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-timeline: auto;
+    scroll-timeline-name: none;
+    --scroll-duration: 2000ms;
   }
 }

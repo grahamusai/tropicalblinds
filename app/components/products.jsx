@@ -60,7 +60,7 @@ export default function ProductsSection() {
   ]
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-gradient-to-b from-gray-50 to-white py-24">
+    <section id="products" ref={sectionRef} className="relative overflow-hidden bg-gradient-to-b from-gray-50 to-white py-24">
       {/* Decorative elements */}
       <motion.div
         className="absolute -right-16 top-32 h-64 w-64 rounded-full bg-primary/5"
@@ -82,8 +82,8 @@ export default function ProductsSection() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Our <span className="text-primary">Products</span>
+          <h2 className="text-3xl text-gray-600 font-bold tracking-tight sm:text-4xl md:text-5xl">
+            Our <span className="text-[#56bbf1]">Products</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
             Discover our premium range of blinds and awnings, designed to enhance your space with style and
@@ -117,7 +117,7 @@ export default function ProductsSection() {
                     height={600}
                     className="h-auto w-full object-cover"
                   />
-                  <div className="absolute left-4 top-4 rounded-full bg-primary px-4 py-1 text-sm font-medium text-white">
+                  <div className="absolute bg-[#56bbf1] left-4 top-4 rounded-full px-4 py-1 text-sm font-medium text-white">
                     {product.category}
                   </div>
                 </motion.div>
@@ -126,7 +126,7 @@ export default function ProductsSection() {
               {/* Product Info */}
               <div className="flex flex-col justify-center space-y-6">
                 <div>
-                  <h3 className="text-2xl font-bold">{product.title}</h3>
+                  <h3 className="text-2xl text-[#56bbf1] font-bold">{product.title}</h3>
                   <p className="mt-3 text-gray-600">{product.description}</p>
                 </div>
 
@@ -165,7 +165,7 @@ export default function ProductsSection() {
                 </div>
 
                 <motion.div whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 300 }}>
-                  <Button className="mt-4 gap-2">
+                  <Button className="mt-4 gap-2 bg-[#56bbf1] hover:bg-blue-600">
                     Explore {product.category}
                     <ArrowRight className="h-4 w-4" />
                   </Button>
@@ -177,18 +177,18 @@ export default function ProductsSection() {
 
         {/* Call to action */}
         <motion.div
-          className="mx-auto mt-24 max-w-3xl rounded-xl bg-primary/5 p-8 text-center"
+          className="mx-auto mt-24 max-w-3xl rounded-xl bg-[#56bbf1] p-8 text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.7, delay: 0.5 }}
         >
           <h3 className="text-2xl font-bold">Custom Solutions For Your Space</h3>
-          <p className="mx-auto mt-3 max-w-xl text-gray-600">
+          <p className="mx-auto mt-3 max-w-xl text-gray-800">
             Not sure what you need? Our experts can help you find the perfect blinds or awnings for your home or
             business.
           </p>
           <div className="mt-6 flex flex-col justify-center gap-4 sm:flex-row">
-            <Button size="lg">Request a Consultation</Button>
+            <Button size="lg" className="bg-black hover:bg-blue-600">Request a Consultation</Button>
             <Button variant="outline" size="lg">
               View All Products
             </Button>

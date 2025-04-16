@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 
@@ -43,15 +44,21 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
           >
-            <Button size="lg" className="bg-blue-400 hover:bg-blue-500 min-w-[150px]">
+            <Button size="lg" className="text-gray-900 font-semibold bg-blue-400 hover:bg-blue-500 min-w-[150px]">
+              <Link href="#about">
               Get Started
+              </Link>
+              
             </Button>
             <Button
               variant="outline"
               size="lg"
               className="min-w-[150px] bg-transparent text-white hover:bg-white/10 hover:text-white"
             >
+              <Link href="/products">
               Learn More
+              </Link>
+             
             </Button>
           </motion.div>
         </div>

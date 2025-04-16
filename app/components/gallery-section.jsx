@@ -6,7 +6,6 @@ import { motion, AnimatePresence, useInView } from "framer-motion"
 import { X, ZoomIn, ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-// Sample gallery data
 const galleryItems = [
   {
     id: 1,
@@ -18,65 +17,65 @@ const galleryItems = [
   },
   {
     id: 2,
-    src: "/gallery/gallery-2.jpg",
+    src: "/gallery/carpet.jpg",
     alt: "Retractable awning on a patio",
-    category: "awnings",
+    category: "carpets",
     description: "Retractable Patio Awning",
     location: "Suburban Home",
   },
   {
     id: 3,
-    src: "/gallery/gallery-3.jpg",
+    src: "/gallery/car-shed.jpg",
     alt: "Venetian blinds in an office",
-    category: "blinds",
+    category: "carsheds",
     description: "Aluminum Venetian Blinds",
     location: "Corporate Office",
   },
   {
     id: 4,
-    src: "/gallery/gallery-4.jpg",
+    src: "/gallery/gallery-2.jpg",
     alt: "Fixed awning for a storefront",
-    category: "awnings",
+    category: "blinds",
     description: "Commercial Fixed Awning",
     location: "Retail Storefront",
   },
   {
     id: 5,
-    src: "/gallery/gallery-5.jpg",
+    src: "/gallery/car-shed2.jpg",
     alt: "Roman blinds in a bedroom",
-    category: "blinds",
+    category: "carsheds",
     description: "Elegant Roman Blinds",
     location: "Master Bedroom",
   },
   {
     id: 6,
-    src: "/gallery/gallery-6.jpg",
+    src: "/gallery/carpet2.jpg",
     alt: "Motorized awning for a restaurant",
-    category: "awnings",
+    category: "carpets",
     description: "Motorized Restaurant Awning",
     location: "Outdoor Dining Area",
   },
   {
     id: 7,
-    src: "/gallery/gallery-7.jpg",
+    src: "/gallery/carpet3.jpg",
     alt: "Vertical blinds for a sliding door",
-    category: "blinds",
+    category: "carpets",
     description: "Vertical Blinds",
     location: "Patio Door Installation",
   },
   {
     id: 8,
-    src: "/placeholder.svg?height=600&width=800",
+    src: "/gallery/gallery-3.jpg",
     alt: "Freestanding awning by a pool",
-    category: "awnings",
+    category: "blinds",
     description: "Freestanding Poolside Awning",
     location: "Luxury Backyard",
   },
   {
     id: 9,
-    src: "/placeholder.svg?height=600&width=800",
+    src: "/gallery/car-shed3.jpg",
     alt: "Wooden blinds in a study",
-    category: "blinds",
+    category: "carsheds",
     description: "Premium Wooden Blinds",
     location: "Home Office",
   },
@@ -127,7 +126,7 @@ export default function GallerySection() {
   }
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-white py-24">
+    <section id="gallery" ref={sectionRef} className="relative overflow-hidden bg-white py-24">
       {/* Decorative elements */}
       <motion.div
         className="absolute -left-16 top-32 h-64 w-64 rounded-full bg-primary/5"
@@ -149,8 +148,8 @@ export default function GallerySection() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Our <span className="text-primary">Gallery</span>
+          <h2 className="text-3xl text-gray-600 font-bold tracking-tight sm:text-4xl md:text-5xl">
+            Our <span className="text-[#56bbf1]">Gallery</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
             Browse our portfolio of completed projects and get inspired for your own space.
@@ -165,25 +164,32 @@ export default function GallerySection() {
           transition={{ duration: 0.7, delay: 0.2 }}
         >
           <Button
-            variant={filter === "all" ? "default" : "outline"}
+            variant="outline"
             onClick={() => setFilter("all")}
-            className="min-w-[100px]"
+            className={`min-w-[100px] ${filter === "all" ? "bg-[#56bbf1] text-white hover:bg-[#56bbf1]/90" : ""}`}
           >
             All
           </Button>
           <Button
-            variant={filter === "blinds" ? "default" : "outline"}
+            variant="outline"
             onClick={() => setFilter("blinds")}
-            className="min-w-[100px]"
+            className={`min-w-[100px] ${filter === "blinds" ? "bg-[#56bbf1] text-white hover:bg-[#56bbf1]/90" : ""}`}
           >
             Blinds
           </Button>
           <Button
-            variant={filter === "awnings" ? "default" : "outline"}
-            onClick={() => setFilter("awnings")}
-            className="min-w-[100px]"
+            variant="outline"
+            onClick={() => setFilter("carpets")}
+            className={`min-w-[100px] ${filter === "carpets" ? "bg-[#56bbf1] text-white hover:bg-[#56bbf1]/90" : ""}`}
           >
-            Awnings
+            Carpets
+          </Button>
+          <Button
+            variant="outline"
+            onClick={() => setFilter("carsheds")}
+            className={`min-w-[100px] ${filter === "carsheds" ? "bg-[#56bbf1] text-white hover:bg-[#56bbf1]/90" : ""}`}
+          >
+            Car Sheds
           </Button>
         </motion.div>
 
@@ -232,7 +238,7 @@ export default function GallerySection() {
         </motion.div>
 
         {/* "View more" button */}
-        <motion.div
+        {/* <motion.div
           className="mt-12 text-center"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
@@ -241,7 +247,7 @@ export default function GallerySection() {
           <Button variant="outline" size="lg">
             View More Projects
           </Button>
-        </motion.div>
+        </motion.div> */}
       </div>
 
       {/* Lightbox/Modal */}
