@@ -32,23 +32,38 @@ export default function AboutSection() {
   const teamMembers = [
     {
       name: "Blinds",
-    //   role: "Founder & CEO",
-      image: "/gallery/gallery-2.jpg",
+      // role: "Founder & CEO",
+      image: "/roller-blinds/01.jpg",
     },
     {
-      name: "Car Sheds",
-    //   role: "Creative Director",
-      image: "/gallery/car-shed2.jpg",
+      name: "Awnings",
+      // role: "Creative Director", 
+      image: "/images/awning-hero.jpg",
     },
     {
-      name: "Carpets",
-    //   role: "Lead Developer",
-      image: "/gallery/carpet.jpg",
+      name: "Shutters",
+      // role: "Lead Designer",
+      image: "/shutters/03.jpg",
+    },
+    {
+      name: "Curtains",
+      // role: "Installation Manager",
+      image: "/images/curtains.jpg",
+    },
+    {
+      name: "Car Shades",
+      // role: "Customer Service Lead",
+      image: "/images/car-shade4.jpg",
+    },
+    {
+      name: "Carperts",
+      // role: "Sales Director",
+      image: "/images/carpets0.jpg",
     },
   ]
 
   return (
-    <section id="about" ref={sectionRef} className="relative overflow-hidden bg-gradient-to-b from-white to-gray-50 py-24">
+    <section ref={sectionRef} className="relative overflow-hidden bg-gradient-to-b from-white to-gray-50 py-24">
       {/* Decorative elements */}
       <motion.div
         className="absolute -left-16 -top-16 h-64 w-64 rounded-full bg-primary/5"
@@ -125,70 +140,38 @@ export default function AboutSection() {
             </motion.div>
           </motion.div>
 
-          {/* Team section with staggered animation */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-            transition={{ duration: 0.7, delay: 0.5 }}
-            className="relative h-[400px] md:h-auto"
-          >
-            <div className="relative h-full">
-              {teamMembers.map((member, index) => (
-                <motion.div
-                  key={member.name}
-                  className="absolute rounded-lg bg-white p-2 shadow-lg"
-                  initial={{
-                    x: index % 2 === 0 ? -50 : 50,
-                    y: 50 * index,
-                    opacity: 0,
-                    rotate: index % 2 === 0 ? -5 : 5,
-                  }}
-                  animate={
-                    isInView
-                      ? {
-                          x: index % 2 === 0 ? 0 : index === 1 ? 120 : 60,
-                          y: index * 120,
-                          opacity: 1,
-                          rotate: index % 2 === 0 ? -3 : 3,
-                        }
-                      : {}
-                  }
-                  transition={{
-                    duration: 0.8,
-                    delay: 0.2 + index * 0.2,
-                    ease: "easeOut",
-                  }}
-                  whileHover={{
-                    scale: 1.05,
-                    rotate: 0,
-                    zIndex: 10,
-                    transition: { duration: 0.3 },
-                  }}
-                  style={{
-                    width: `${220 - index * 20}px`,
-                    zIndex: 3 - index,
-                  }}
-                >
-                  <div className="relative overflow-hidden rounded">
-                    <Image
-                      src={member.image || "/placeholder.svg"}
-                      alt={member.name}
-                      width={200}
-                      height={200}
-                      className="h-auto w-full object-cover"
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3 text-white">
-                      <p className="font-medium">{member.name}</p>
-                      <p className="text-sm text-gray-200">{member.role}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-
         
+                <motion.div
+                initial={{ opacity: 0 }}
+                animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+                transition={{ duration: 0.7, delay: 0.5 }}
+                className="relative h-[600px] md:h-auto"
+                >
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  {teamMembers.map((member, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex flex-col items-center rounded-lg bg-white p-2 shadow-md transition-shadow hover:shadow-lg"
+                    whileHover={{ 
+                      scale: 1.05,
+                      transition: { duration: 0.2 }
+                    }}
+                  >
+                    <Image
+                    src={member.image}
+                    alt={member.name}
+                    width={200}
+                    height={200}
+                    className="mb-2 h-40 w-full rounded-md object-cover"
+                    />
+                    <h3 className="text-lg font-medium">{member.name}</h3>
+                  </motion.div>
+                  ))}
+                </div>
+                </motion.div>
+              </div>
+
+            
       </div>
     </section>
   )
@@ -199,23 +182,40 @@ function CounterStat({ value, label }) {
   const counterRef = useRef(null)
   const isInView = useInView(counterRef, { once: true })
 
-  
+  return (
+    <div ref={counterRef} className="text-center">
+      <motion.div
+        className="text-3xl font-bold text-primary"
+        initial={{ opacity: 0 }}
+        animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ duration: 0.3 }}
+      >
+        <motion.span
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 0.3, delay: 0.1 }}
+        >
+          {isInView ? <Counter from={0} to={value} duration={2} /> : "0"}
+        </motion.span>
+        <span>+</span>
+      </motion.div>
+      <p className="text-gray-600">{label}</p>
+    </div>
+  )
 }
 
 // Counter animation component
 function Counter({ from, to, duration = 2 }) {
-    return (
+  const nodeRef = useRef(null)
+
+  return (
     <motion.span
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      ref={nodeRef}
+      initial={{ count: from }}
+      animate={{ count: to }}
+      transition={{ duration, ease: "easeOut" }}
     >
-      <motion.span
-        initial={{ count: from }}
-        animate={{ count: to }}
-        transition={{ duration, ease: "easeOut" }}
-      >
-        {(value) => Math.floor(value.count)}
-      </motion.span>
+      {({ count }) => Math.floor(count)}
     </motion.span>
   )
 }

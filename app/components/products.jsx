@@ -42,7 +42,7 @@ export default function ProductsSection() {
         { icon: <Home className="h-5 w-5" />, text: "Energy Efficient" },
         { icon: <Ruler className="h-5 w-5" />, text: "Custom Sizes" },
       ],
-      variants: ["Vertical Blinds", "Aluminium Venetians", "Roller Blinds", "Wooden Blinds", "Bamboo Blinds", "Roman Blinds", "Curtains (Rods & Rails)"],
+      variants: ["Vertical Blinds", "Aluminium Venetians", "Roller Blinds", "Wooden Blinds", "Bamboo Blinds", "Roman Blinds"],
     },
     {
       category: "Awnings",
@@ -56,6 +56,58 @@ export default function ProductsSection() {
         { icon: <Ruler className="h-5 w-5" />, text: "Custom Designs" },
       ],
       variants: ["Retractable Awnings", "Fixed Awnings", "Freestanding Awnings", "Motorized Systems"],
+    },
+    {
+      category: "Curtains",
+      title: "Elegant Custom Curtains",
+      description:
+        "Add luxury and sophistication to your windows with our custom curtain collection. From sheer to blackout, our curtains offer both beauty and functionality for any room.",
+      image: "/images/curtains.jpg",
+      features: [
+        { icon: <Shield className="h-5 w-5" />, text: "Premium Fabrics" },
+        { icon: <Sun className="h-5 w-5" />, text: "Light Control" },
+        { icon: <Ruler className="h-5 w-5" />, text: "Made to Measure" },
+      ],
+      variants: ["Sheer Curtains", "Blackout Curtains", "Day & Night Curtains", "Wave Curtains", "Eyelet Curtains", "Pinch Pleat", "Decorative Tracks"],
+    },
+    {
+      category: "Car Shades",
+      title: "Automotive Sun Solutions",
+      description:
+        "Protect your vehicle's interior and maintain comfort with our premium car shade solutions. Custom-fitted for various vehicle models to ensure perfect coverage.",
+      image: "/images/car-shade4.jpg",
+      features: [
+        { icon: <Shield className="h-5 w-5" />, text: "Heat Reduction" },
+        { icon: <Sun className="h-5 w-5" />, text: "99% UV Block" },
+        { icon: <Ruler className="h-5 w-5" />, text: "Perfect Fit" },
+      ],
+      variants: ["Magnetic Shades", "Custom Roll-up Shades", "Window Tinting", "Windshield Sunshades", "Full Car Sets", "Privacy Shades"],
+    },
+    {
+      category: "Carpets",
+      title: "Premium Carpet Solutions",
+      description:
+        "Enhance your space with our extensive range of carpets. From luxurious residential carpets to durable commercial solutions, we offer quality materials and expert installation.",
+      image: "/images/carpets0.jpg",
+      features: [
+        { icon: <Shield className="h-5 w-5" />, text: "Stain Resistant" },
+        { icon: <Sun className="h-5 w-5" />, text: "Long Lasting" },
+        { icon: <Ruler className="h-5 w-5" />, text: "Professional Install" },
+      ],
+      variants: ["Wall-to-Wall Carpets", "Area Rugs", "Commercial Carpets", "Wool Carpets", "Synthetic Carpets", "Designer Collections", "Outdoor Carpets"],
+    },
+    {
+      category: "Shutters",
+      title: "Classic Window Shutters",
+      description:
+        "Experience timeless elegance with our premium window shutters. Combining traditional charm with modern functionality, our shutters provide perfect light control and privacy.",
+      image: "/shutters/02.jpg",
+      features: [
+        { icon: <Shield className="h-5 w-5" />, text: "Durable Build" },
+        { icon: <Sun className="h-5 w-5" />, text: "Light Control" },
+        { icon: <Ruler className="h-5 w-5" />, text: "Custom Fit" },
+      ],
+      variants: ["Plantation Shutters", "Wooden Shutters", "PVC Shutters", "Cafe Style", "Full Height", "Tier-on-Tier", "Security Shutters"],
     },
   ]
 
@@ -111,7 +163,7 @@ export default function ProductsSection() {
                   transition={{ duration: 0.3 }}
                 >
                   <Image
-                    src={product.image || "/placeholder.svg"}
+                    src={product.image || "/images/feature-blinds.jpeg"}
                     alt={product.title}
                     width={800}
                     height={600}
@@ -165,10 +217,7 @@ export default function ProductsSection() {
                 </div>
 
                 <motion.div whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 300 }}>
-                  <Button className="mt-4 gap-2 bg-[#56bbf1] hover:bg-blue-600">
-                    Explore {product.category}
-                    <ArrowRight className="h-4 w-4" />
-                  </Button>
+                  
                 </motion.div>
               </div>
             </motion.div>

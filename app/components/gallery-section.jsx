@@ -1,15 +1,16 @@
-"use client"
+"use client";
 
-import { useState, useRef } from "react"
-import Image from "next/image"
-import { motion, AnimatePresence, useInView } from "framer-motion"
-import { X, ZoomIn, ChevronLeft, ChevronRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useState, useRef } from "react";
+import Image from "next/image";
+import { motion, AnimatePresence, useInView } from "framer-motion";
+import { X, ZoomIn, ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const galleryItems = [
+  // Blinds
   {
     id: 1,
-    src: "/gallery/gallery-1.jpg",
+    src: "/bamboo/01.jpg",
     alt: "Modern roller blinds in a living room",
     category: "blinds",
     description: "Modern Roller Blinds",
@@ -17,23 +18,23 @@ const galleryItems = [
   },
   {
     id: 2,
-    src: "/gallery/carpet.jpg",
+    src: "/bamboo/02.jpg",
     alt: "Retractable awning on a patio",
-    category: "carpets",
+    category: "blinds",
     description: "Retractable Patio Awning",
     location: "Suburban Home",
   },
   {
     id: 3,
-    src: "/gallery/car-shed.jpg",
+    src: "/bamboo/03.jpg",
     alt: "Venetian blinds in an office",
-    category: "carsheds",
+    category: "blinds",
     description: "Aluminum Venetian Blinds",
     location: "Corporate Office",
   },
   {
     id: 4,
-    src: "/gallery/gallery-2.jpg",
+    src: "/drop-blinds/01.jpg",
     alt: "Fixed awning for a storefront",
     category: "blinds",
     description: "Commercial Fixed Awning",
@@ -41,31 +42,31 @@ const galleryItems = [
   },
   {
     id: 5,
-    src: "/gallery/car-shed2.jpg",
+    src: "/drop-blinds/02.jpg",
     alt: "Roman blinds in a bedroom",
-    category: "carsheds",
+    category: "blinds",
     description: "Elegant Roman Blinds",
     location: "Master Bedroom",
   },
   {
     id: 6,
-    src: "/gallery/carpet2.jpg",
+    src: "/panel-blinds/01.jpg",
     alt: "Motorized awning for a restaurant",
-    category: "carpets",
+    category: "blinds",
     description: "Motorized Restaurant Awning",
     location: "Outdoor Dining Area",
   },
   {
     id: 7,
-    src: "/gallery/carpet3.jpg",
+    src: "/panel-blinds/02.jpg",
     alt: "Vertical blinds for a sliding door",
-    category: "carpets",
+    category: "blinds",
     description: "Vertical Blinds",
     location: "Patio Door Installation",
   },
   {
     id: 8,
-    src: "/gallery/gallery-3.jpg",
+    src: "/panel-blinds/03.jpg",
     alt: "Freestanding awning by a pool",
     category: "blinds",
     description: "Freestanding Poolside Awning",
@@ -73,36 +74,289 @@ const galleryItems = [
   },
   {
     id: 9,
-    src: "/gallery/car-shed3.jpg",
+    src: "/roller-blinds/01.jpg",
+    alt: "Wooden blinds in a study",
+    category: "blinds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 10,
+    src: "/roller-blinds/02.jpg",
+    alt: "Wooden blinds in a study",
+    category: "blinds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 11,
+    src: "/roller-blinds/03.jpg",
+    alt: "Wooden blinds in a study",
+    category: "blinds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 12,
+    src: "/venitian-blinds/01.jpg",
+    alt: "Wooden blinds in a study",
+    category: "blinds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 13,
+    src: "/vertical-blinds/01.jpg",
+    alt: "Wooden blinds in a study",
+    category: "blinds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 14,
+    src: "/vertical-blinds/02.jpg",
+    alt: "Wooden blinds in a study",
+    category: "blinds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 15,
+    src: "/vertical-blinds/03.jpg",
+    alt: "Wooden blinds in a study",
+    category: "blinds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 16,
+    src: "/vertical-blinds/04.jpg",
+    alt: "Wooden blinds in a study",
+    category: "blinds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 17,
+    src: "/vertical-blinds/05.jpg",
+    alt: "Wooden blinds in a study",
+    category: "blinds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  // Awnings
+  {
+    id: 18,
+    src: "/awnings/01.jpg",
+    alt: "Wooden blinds in a study",
+    category: "awnings",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 19,
+    src: "/awnings/02.jpg",
+    alt: "Wooden blinds in a study",
+    category: "awnings",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  // Curtains
+  {
+    id: 20,
+    src: "/vertical-blinds/05.jpg",
+    alt: "Wooden blinds in a study",
+    category: "blinds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 21,
+    src: "/curtains/01.png",
+    alt: "Wooden blinds in a study",
+    category: "curtains",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 22,
+    src: "/curtains/02.avif",
+    alt: "Wooden blinds in a study",
+    category: "curtains",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 23,
+    src: "/curtains/03.webp",
+    alt: "Wooden blinds in a study",
+    category: "curtains",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 24,
+    src: "/curtains/04.avif",
+    alt: "Wooden blinds in a study",
+    category: "curtains",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  // Car Shades
+  {
+    id: 25,
+    src: "/car-shades/01.jpg",
+
     alt: "Wooden blinds in a study",
     category: "carsheds",
     description: "Premium Wooden Blinds",
     location: "Home Office",
   },
-]
+  {
+    id: 26,
+    src: "/car-shades/02.jpg",
+    alt: "Wooden blinds in a study",
+    category: "carsheds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 27,
+    src: "/car-shades/03.jpg",
+    alt: "Wooden blinds in a study",
+    category: "carsheds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 28,
+    src: "/car-shades/04.jpg",
+    alt: "Wooden blinds in a study",
+    category: "carsheds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 29,
+    src: "/car-shades/05.jpg",
+    alt: "Wooden blinds in a study",
+    category: "carsheds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  // Carpets
+  {
+    id: 30,
+    src: "/carpets/01.jpg",
+    alt: "Wooden blinds in a study",
+    category: "carpets",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 31,
+    src: "/carpets/02.jpg",
+    alt: "Wooden blinds in a study",
+    category: "carpets",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 32,
+    src: "/carpets/03.jpg",
+    alt: "Wooden blinds in a study",
+    category: "carpets",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  // {
+  //   id: 33,
+  //   src: "/carpets/04.jpg",
+  //   alt: "Wooden blinds in a study",
+  //   category: "carpets",
+  //   description: "Premium Wooden Blinds",
+  //   location: "Home Office",
+  // },
+  {
+    id: 34,
+    src: "/carpets/04.webp",
+    alt: "Wooden blinds in a study",
+    category: "carpets",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  // Shutters
+  {
+    id: 35,
+    src: "/shutters/01.jpg",
+    alt: "Wooden blinds in a study",
+    category: "shutters",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 36,
+    src: "/shutters/02.jpg",
+    alt: "Wooden blinds in a study",
+    category: "shutters",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 37,
+    src: "/shutters/03.jpg",
+    alt: "Wooden blinds in a study",
+    category: "shutters",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 38,
+    src: "/shutters/04.jpg",
+    alt: "Wooden blinds in a study",
+    category: "shutters",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 39,
+    src: "/shutters/05.jpg",
+    alt: "Wooden blinds in a study",
+    category: "shutters",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+];
 
 export default function GallerySection() {
-  const [filter, setFilter] = useState("all")
-  const [selectedImage, setSelectedImage] = useState(null)
-  const sectionRef = useRef(null)
-  const isInView = useInView(sectionRef, { once: true, amount: 0.1 })
+  const [filter, setFilter] = useState("all");
+  const [selectedImage, setSelectedImage] = useState(null);
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
-  const filteredItems = galleryItems.filter((item) => filter === "all" || item.category === filter)
+  const filteredItems = galleryItems.filter(
+    (item) => filter === "all" || item.category === filter
+  );
 
   // Handle lightbox navigation
   const handlePrevious = () => {
-    if (!selectedImage) return
-    const currentIndex = galleryItems.findIndex((item) => item.id === selectedImage.id)
-    const previousIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length
-    setSelectedImage(galleryItems[previousIndex])
-  }
+    if (!selectedImage) return;
+    const currentIndex = galleryItems.findIndex(
+      (item) => item.id === selectedImage.id
+    );
+    const previousIndex =
+      (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+    setSelectedImage(galleryItems[previousIndex]);
+  };
 
   const handleNext = () => {
-    if (!selectedImage) return
-    const currentIndex = galleryItems.findIndex((item) => item.id === selectedImage.id)
-    const nextIndex = (currentIndex + 1) % galleryItems.length
-    setSelectedImage(galleryItems[nextIndex])
-  }
+    if (!selectedImage) return;
+    const currentIndex = galleryItems.findIndex(
+      (item) => item.id === selectedImage.id
+    );
+    const nextIndex = (currentIndex + 1) % galleryItems.length;
+    setSelectedImage(galleryItems[nextIndex]);
+  };
 
   // Animation variants
   const containerVariants = {
@@ -114,7 +368,7 @@ export default function GallerySection() {
         delayChildren: 0.3,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -123,10 +377,14 @@ export default function GallerySection() {
       opacity: 1,
       transition: { duration: 0.5, ease: "easeOut" },
     },
-  }
+  };
 
   return (
-    <section id="gallery" ref={sectionRef} className="relative overflow-hidden bg-white py-24">
+    <section
+      id="gallery"
+      ref={sectionRef}
+      className="relative overflow-hidden bg-white py-24"
+    >
       {/* Decorative elements */}
       <motion.div
         className="absolute -left-16 top-32 h-64 w-64 rounded-full bg-primary/5"
@@ -152,7 +410,8 @@ export default function GallerySection() {
             Our <span className="text-[#56bbf1]">Gallery</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-            Browse our portfolio of completed projects and get inspired for your own space.
+            Browse our portfolio of completed projects and get inspired for your
+            own space.
           </p>
         </motion.div>
 
@@ -166,30 +425,79 @@ export default function GallerySection() {
           <Button
             variant="outline"
             onClick={() => setFilter("all")}
-            className={`min-w-[100px] ${filter === "all" ? "bg-[#56bbf1] text-white hover:bg-[#56bbf1]/90" : ""}`}
+            className={`min-w-[100px] ${
+              filter === "all"
+                ? "bg-[#56bbf1] text-white hover:bg-[#56bbf1]/90"
+                : ""
+            }`}
           >
             All
           </Button>
           <Button
             variant="outline"
             onClick={() => setFilter("blinds")}
-            className={`min-w-[100px] ${filter === "blinds" ? "bg-[#56bbf1] text-white hover:bg-[#56bbf1]/90" : ""}`}
+            className={`min-w-[100px] ${
+              filter === "blinds"
+                ? "bg-[#56bbf1] text-white hover:bg-[#56bbf1]/90"
+                : ""
+            }`}
           >
             Blinds
           </Button>
           <Button
             variant="outline"
+            onClick={() => setFilter("awnings")}
+            className={`min-w-[100px] ${
+              filter === "awnings"
+                ? "bg-[#56bbf1] text-white hover:bg-[#56bbf1]/90"
+                : ""
+            }`}
+          >
+            Awnings
+          </Button>
+          <Button
+            variant="outline"
+            onClick={() => setFilter("curtains")}
+            className={`min-w-[100px] ${
+              filter === "curtains"
+                ? "bg-[#56bbf1] text-white hover:bg-[#56bbf1]/90"
+                : ""
+            }`}
+          >
+            Curtains
+          </Button>
+          <Button
+            variant="outline"
+            onClick={() => setFilter("carsheds")}
+            className={`min-w-[100px] ${
+              filter === "carsheds"
+                ? "bg-[#56bbf1] text-white hover:bg-[#56bbf1]/90"
+                : ""
+            }`}
+          >
+            Car Shades
+          </Button>
+          <Button
+            variant="outline"
             onClick={() => setFilter("carpets")}
-            className={`min-w-[100px] ${filter === "carpets" ? "bg-[#56bbf1] text-white hover:bg-[#56bbf1]/90" : ""}`}
+            className={`min-w-[100px] ${
+              filter === "carpets"
+                ? "bg-[#56bbf1] text-white hover:bg-[#56bbf1]/90"
+                : ""
+            }`}
           >
             Carpets
           </Button>
           <Button
             variant="outline"
-            onClick={() => setFilter("carsheds")}
-            className={`min-w-[100px] ${filter === "carsheds" ? "bg-[#56bbf1] text-white hover:bg-[#56bbf1]/90" : ""}`}
+            onClick={() => setFilter("shutters")}
+            className={`min-w-[100px] ${
+              filter === "shutters"
+                ? "bg-[#56bbf1] text-white hover:bg-[#56bbf1]/90"
+                : ""
+            }`}
           >
-            Car Sheds
+            Shutters
           </Button>
         </motion.div>
 
@@ -222,8 +530,8 @@ export default function GallerySection() {
                   />
                 </div>
                 <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/70 via-black/40 to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  <h3 className="text-xl font-bold text-white">{item.description}</h3>
-                  <p className="text-gray-200">{item.location}</p>
+                  {/* <h3 className="text-xl font-bold text-white">{item.description}</h3> */}
+                  {/* <p className="text-gray-200">{item.location}</p> */}
                   <button
                     onClick={() => setSelectedImage(item)}
                     className="mt-4 flex items-center gap-2 rounded-full bg-white/20 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/30"
@@ -236,18 +544,6 @@ export default function GallerySection() {
             ))}
           </AnimatePresence>
         </motion.div>
-
-        {/* "View more" button */}
-        {/* <motion.div
-          className="mt-12 text-center"
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: 0.7, delay: 0.5 }}
-        >
-          <Button variant="outline" size="lg">
-            View More Projects
-          </Button>
-        </motion.div> */}
       </div>
 
       {/* Lightbox/Modal */}
@@ -277,7 +573,9 @@ export default function GallerySection() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold">{selectedImage.description}</h3>
+                <h3 className="text-xl font-bold">
+                  {selectedImage.description}
+                </h3>
                 <p className="text-gray-600">{selectedImage.location}</p>
                 <p className="mt-2 text-gray-600">
                   {selectedImage.category === "blinds"
@@ -289,8 +587,8 @@ export default function GallerySection() {
               {/* Navigation buttons */}
               <button
                 onClick={(e) => {
-                  e.stopPropagation()
-                  handlePrevious()
+                  e.stopPropagation();
+                  handlePrevious();
                 }}
                 className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/20 p-2 text-white backdrop-blur-sm transition-colors hover:bg-white/30"
                 aria-label="Previous image"
@@ -299,8 +597,8 @@ export default function GallerySection() {
               </button>
               <button
                 onClick={(e) => {
-                  e.stopPropagation()
-                  handleNext()
+                  e.stopPropagation();
+                  handleNext();
                 }}
                 className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/20 p-2 text-white backdrop-blur-sm transition-colors hover:bg-white/30"
                 aria-label="Next image"
@@ -321,5 +619,5 @@ export default function GallerySection() {
         )}
       </AnimatePresence>
     </section>
-  )
+  );
 }

@@ -36,7 +36,7 @@ export default function FooterSection() {
             className="space-y-4"
           >
             <div className="flex items-center gap-2 text-xl font-bold">
-              Tropical Shadess
+              Tropical Shades
             </div>
             <p className="text-black">
             Tropical Shades now manufactures and markets a full range of Internal and External blinds, curtains, doormats, car-sheds and awnings. 
@@ -60,15 +60,7 @@ export default function FooterSection() {
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </motion.a>
-              <motion.a
-                href="https://www.youtube.com/@Tropical%20shades"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-black transition-colors hover:bg-primary hover:text-white"
-                whileHover={{ y: -3 }}
-                transition={{ type: "spring", stiffness: 400 }}
-              >
-                <Youtube className="h-5 w-5" />
-                <span className="sr-only">Youtube</span>
-              </motion.a>
+              
               
             </div>
           </motion.div>
@@ -150,7 +142,7 @@ export default function FooterSection() {
               <ul className="space-y-3">
                 <li className="flex items-start gap-3 text-black">
                   <MapPin className="mt-1 h-5 w-5 shrink-0 text-primary" />
-                  <span>25 George Silundika Regal Star Hse, 10 th Floor North wing</span>
+                  <span>25 George Silundika Regal Star Hse, 4th Floor North wing</span>
                 </li>
                 <li className="flex flex-col  gap-3 text-black">
                   {/* <Phone className="h-5 w-5 shrink-0 text-primary" /> */}
@@ -160,8 +152,8 @@ export default function FooterSection() {
                 </li>
                 <li className="flex flex-col  gap-3 text-black">
                   {/* <Mail className="h-5 w-5 shrink-0 text-primary" /> */}
-                  <span>info@tropicalshades.co.zw</span>
-                  <span>sales@tropicalshades.co.zw</span>
+                  <span>info@tropicalblinds.co.zw</span>
+                  <span>sales@tropicalblinds.co.zw</span>
                 </li>
               </ul>
             </div>
@@ -179,7 +171,7 @@ export default function FooterSection() {
           className="mt-16 border-t border-gray-200 py-8"
         >
           <div className="flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
-            <p className="text-sm text-black">© {currentYear} Tropical Shades Blinds & Awnings. All rights reserved.</p>
+            <p className="text-sm text-black">© {currentYear} Tropical Shades. All rights reserved.</p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-black">
               
             </div>

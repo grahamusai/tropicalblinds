@@ -2,6 +2,9 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+* {
+  /* outline: 1px solid red; */
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -46,6 +49,22 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .animate-scroll {
+    animation: scroll 60s linear infinite;
+  }
+
+  .animate-scroll-reverse {
+    animation: scroll 60s linear infinite reverse;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
 
   .animate-marquee {

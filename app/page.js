@@ -12,8 +12,8 @@ export default function Home() {
     <div className="pt-[120px]">
       <Hero />
       <Logos />
-      <AboutSection />
       <ProductsSection />
+      <AboutSection />
       <GallerySection />
     </div>
   );

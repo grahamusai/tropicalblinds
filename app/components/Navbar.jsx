@@ -40,7 +40,7 @@ export default function Navbar() {
             <Phone className="h-4 w-4" />
             <span className="hidden sm:inline">Call us at</span>
             <a href="tel:+263772237348" className="hover:underline ">
-              +263 77 223 7348  
+            +263 772 211 411
             </a>
           </div>
           <div className="flex items-center space-x-4 md:space-x-6">
@@ -50,7 +50,7 @@ export default function Navbar() {
             >
               <MapPin className="h-4 w-4 mr-1" />
               <span className="hidden sm:inline ">
-                25 George Silundika Regal Star Hse, 10 th Floor North wing
+                25 George Silundika Regal Star Hse, 4th Floor North wing
               </span>
               <span className="sm:hidden ">25 George Silundika</span>
             </Link>
@@ -81,20 +81,28 @@ export default function Navbar() {
               HOME
             </Link>
             <a
-              href="/about"
+              href="/smart-home"
               className="text-gray-600 hover:text-blue-600 cursor-pointer"
             >
-              ABOUT
+              SMART HOME
             </a>
+           
             <a
               href="/products"
               className="text-gray-600 hover:text-blue-600 cursor-pointer"
             >
               PRODUCTS
             </a>
+            
             <Link href="/gallery" className="text-gray-600 hover:text-blue-600">
               GALLERY
             </Link>
+            <a
+              href="/about"
+              className="text-gray-600 hover:text-blue-600 cursor-pointer"
+            >
+              ABOUT
+            </a>
 
             <Link href="/contact" className="text-gray-600 hover:text-blue-600">
               CONTACT US

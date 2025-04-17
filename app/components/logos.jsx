@@ -3,7 +3,11 @@ import React from 'react'
 const Logos = () => {
   return (
     <section className="py-10 bg-gray-50 sm:py-16 lg:py-24">
+       <h2 className="text-center mb-10 text-3xl text-gray-600 font-bold tracking-tight sm:text-4xl md:text-5xl">
+            Our <span className="text-[#56bbf1]">Clientele</span>
+          </h2>
     <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        
         <div className="grid items-center grid-cols-2 gap-10 sm:gap-y-16 sm:grid-cols-3 xl:grid-cols-6">
             <div>
                 <img className="object-contain w-full mx-auto h-14" src="/images/delta.png" alt="" />
