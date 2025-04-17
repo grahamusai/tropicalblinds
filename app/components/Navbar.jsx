@@ -50,9 +50,9 @@ export default function Navbar() {
             >
               <MapPin className="h-4 w-4 mr-1" />
               <span className="hidden sm:inline ">
-              4 floor regal star house north wing
+              25 George Silundika, 4th floor regal star house north wing, Harare Zimbabwe
               </span>
-              <span className="sm:hidden ">4 floor regal star house north wing</span>
+              <span className="sm:hidden ">25 George Silundika, 4th floor regal star house north wing, Harare Zimbabwe</span>
             </Link>
             
           </div>

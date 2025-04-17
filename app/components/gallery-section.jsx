@@ -102,29 +102,38 @@ const galleryItems = [
     id: 12,
     src: "/venitian-blinds/01.jpg",
     alt: "Wooden blinds in a study",
-    category: "venitian-blinds",
+    category: "roller-blinds",
     description: "Premium Wooden Blinds",
     location: "Home Office",
   },
   {
-    id: 40,
-    src: "/venitian-blinds/02.jpg",
+    id: 13,
+    src: "/venitian-blinds/05.jpg",
     alt: "Wooden blinds in a study",
     category: "venitian-blinds",
     description: "Premium Wooden Blinds",
     location: "Home Office",
   },
   {
-    id: 41,
+    id: 14,
     src: "/venitian-blinds/03.webp",
     alt: "Wooden blinds in a study",
     category: "venitian-blinds",
     description: "Premium Wooden Blinds",
     location: "Home Office",
   },
+  {
+    id: 15,
+    src: "/venitian-blinds/04.jpg",
+    alt: "Wooden blinds in a study",
+    category: "venitian-blinds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+ 
   // 127 mm vertical blinds
   {
-    id: 13,
+    id: 16,
     src: "/vertical-blinds/01.jpg",
     alt: "Wooden blinds in a study",
     category: "vertical-blinds",
@@ -132,7 +141,7 @@ const galleryItems = [
     location: "Home Office",
   },
   {
-    id: 14,
+    id: 17,
     src: "/vertical-blinds/02.jpg",
     alt: "Wooden blinds in a study",
     category: "vertical-blinds",
@@ -140,7 +149,7 @@ const galleryItems = [
     location: "Home Office",
   },
   {
-    id: 15,
+    id: 18,
     src: "/vertical-blinds/03.jpg",
     alt: "Wooden blinds in a study",
     category: "vertical-blinds",
@@ -148,7 +157,7 @@ const galleryItems = [
     location: "Home Office",
   },
   {
-    id: 16,
+    id: 19,
     src: "/vertical-blinds/04.jpg",
     alt: "Wooden blinds in a study",
     category: "vertical-blinds",
@@ -156,7 +165,7 @@ const galleryItems = [
     location: "Home Office",
   },
   {
-    id: 17,
+    id: 20,
     src: "/vertical-blinds/05.jpg",
     alt: "Wooden blinds in a study",
     category: "vertical-blinds",
@@ -165,7 +174,7 @@ const galleryItems = [
   },
   // Awnings
   {
-    id: 18,
+    id: 21,
     src: "/awnings/01.jpg",
     alt: "Wooden blinds in a study",
     category: "awnings",
@@ -173,7 +182,7 @@ const galleryItems = [
     location: "Home Office",
   },
   {
-    id: 19,
+    id: 22,
     src: "/awnings/02.jpg",
     alt: "Wooden blinds in a study",
     category: "awnings",
@@ -182,7 +191,7 @@ const galleryItems = [
   },
   // Curtains
   {
-    id: 20,
+    id: 23,
     src: "/vertical-blinds/05.jpg",
     alt: "Wooden blinds in a study",
     category: "blinds",
@@ -190,7 +199,7 @@ const galleryItems = [
     location: "Home Office",
   },
   {
-    id: 21,
+    id: 24,
     src: "/curtains/01.png",
     alt: "Wooden blinds in a study",
     category: "curtains",
@@ -198,7 +207,7 @@ const galleryItems = [
     location: "Home Office",
   },
   {
-    id: 22,
+    id: 25,
     src: "/curtains/02.avif",
     alt: "Wooden blinds in a study",
     category: "curtains",
@@ -206,7 +215,7 @@ const galleryItems = [
     location: "Home Office",
   },
   {
-    id: 23,
+    id: 26,
     src: "/curtains/03.webp",
     alt: "Wooden blinds in a study",
     category: "curtains",
@@ -214,8 +223,25 @@ const galleryItems = [
     location: "Home Office",
   },
   {
-    id: 24,
+    id: 27,
     src: "/curtains/04.avif",
+    alt: "Wooden blinds in a study",
+    category: "curtains",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  
+  {
+    id: 28,
+    src: "/curtains/06.webp",
+    alt: "Wooden blinds in a study",
+    category: "curtains",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 29,
+    src: "/curtains/05.jpg",
     alt: "Wooden blinds in a study",
     category: "curtains",
     description: "Premium Wooden Blinds",
@@ -223,7 +249,7 @@ const galleryItems = [
   },
   // Car Shades
   {
-    id: 25,
+    id: 30,
     src: "/car-shades/01.jpg",
 
     alt: "Wooden blinds in a study",
@@ -232,7 +258,7 @@ const galleryItems = [
     location: "Home Office",
   },
   {
-    id: 26,
+    id: 31,
     src: "/car-shades/02.jpg",
     alt: "Wooden blinds in a study",
     category: "carsheds",
@@ -240,7 +266,7 @@ const galleryItems = [
     location: "Home Office",
   },
   {
-    id: 27,
+    id: 32,
     src: "/car-shades/03.jpg",
     alt: "Wooden blinds in a study",
     category: "carsheds",
@@ -248,7 +274,7 @@ const galleryItems = [
     location: "Home Office",
   },
   {
-    id: 28,
+    id: 33,
     src: "/car-shades/04.jpg",
     alt: "Wooden blinds in a study",
     category: "carsheds",
@@ -256,8 +282,32 @@ const galleryItems = [
     location: "Home Office",
   },
   {
-    id: 29,
+    id: 34,
     src: "/car-shades/05.jpg",
+    alt: "Wooden blinds in a study",
+    category: "carsheds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 35,
+    src: "/car-shades/06.jpg",
+    alt: "Wooden blinds in a study",
+    category: "carsheds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 36,
+    src: "/car-shades/07.jpg",
+    alt: "Wooden blinds in a study",
+    category: "carsheds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 37,
+    src: "/car-shades/08.jpg",
     alt: "Wooden blinds in a study",
     category: "carsheds",
     description: "Premium Wooden Blinds",
@@ -265,7 +315,7 @@ const galleryItems = [
   },
   // Carpets
   {
-    id: 30,
+    id: 38,
     src: "/carpets/01.jpg",
     alt: "Wooden blinds in a study",
     category: "carpets",
@@ -273,7 +323,7 @@ const galleryItems = [
     location: "Home Office",
   },
   {
-    id: 31,
+    id: 39,
     src: "/carpets/02.jpg",
     alt: "Wooden blinds in a study",
     category: "carpets",
@@ -281,7 +331,7 @@ const galleryItems = [
     location: "Home Office",
   },
   {
-    id: 32,
+    id: 40,
     src: "/carpets/03.jpg",
     alt: "Wooden blinds in a study",
     category: "carpets",
@@ -297,8 +347,40 @@ const galleryItems = [
   //   location: "Home Office",
   // },
   {
-    id: 34,
+    id: 41,
     src: "/carpets/04.webp",
+    alt: "Wooden blinds in a study",
+    category: "carpets",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 42,
+    src: "/carpets/04.jpg",
+    alt: "Wooden blinds in a study",
+    category: "carpets",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 43,
+    src: "/carpets/05.jpg",
+    alt: "Wooden blinds in a study",
+    category: "carpets",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 44,
+    src: "/carpets/06.jpg",
+    alt: "Wooden blinds in a study",
+    category: "carpets",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 45,
+    src: "/carpets/07.jpg",
     alt: "Wooden blinds in a study",
     category: "carpets",
     description: "Premium Wooden Blinds",
@@ -306,7 +388,7 @@ const galleryItems = [
   },
   // Shutters
   {
-    id: 35,
+    id: 46,
     src: "/shutters/01.jpg",
     alt: "Wooden blinds in a study",
     category: "shutters",
@@ -314,7 +396,7 @@ const galleryItems = [
     location: "Home Office",
   },
   {
-    id: 36,
+    id: 47,
     src: "/shutters/02.jpg",
     alt: "Wooden blinds in a study",
     category: "shutters",
@@ -322,7 +404,7 @@ const galleryItems = [
     location: "Home Office",
   },
   {
-    id: 37,
+    id: 48,
     src: "/shutters/03.jpg",
     alt: "Wooden blinds in a study",
     category: "shutters",
@@ -330,7 +412,7 @@ const galleryItems = [
     location: "Home Office",
   },
   {
-    id: 38,
+    id: 49,
     src: "/shutters/04.jpg",
     alt: "Wooden blinds in a study",
     category: "shutters",
@@ -338,10 +420,90 @@ const galleryItems = [
     location: "Home Office",
   },
   {
-    id: 39,
+    id: 50,
     src: "/shutters/05.jpg",
     alt: "Wooden blinds in a study",
     category: "shutters",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 51,
+    src: "/shutters/05.jpg",
+    alt: "Wooden blinds in a study",
+    category: "shutters",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 52,
+    src: "/shutters/06.jpg",
+    alt: "Wooden blinds in a study",
+    category: "shutters",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 53,
+    src: "/shutters/07.jpg",
+    alt: "Wooden blinds in a study",
+    category: "shutters",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 54,
+    src: "/clear/01.jpg",
+    alt: "Wooden blinds in a study",
+    category: "clear-blinds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 55,
+    src: "/clear/02.jpg",
+    alt: "Wooden blinds in a study",
+    category: "clear-blinds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 56,
+    src: "/clear/03.jpg",
+    alt: "Wooden blinds in a study",
+    category: "clear-blinds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 57,
+    src: "/clear/04.jpg",
+    alt: "Wooden blinds in a study",
+    category: "clear-blinds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 58,
+    src: "/wooden-blinds/01.jpg",
+    alt: "Wooden blinds in a study",
+    category: "wooden-blinds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 59,
+    src: "/wooden-blinds/02.jpg",
+    alt: "Wooden blinds in a study",
+    category: "wooden-blinds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 60,
+    src: "/wooden-blinds/03.webp",
+    alt: "Wooden blinds in a study",
+    category: "wooden-blinds",
     description: "Premium Wooden Blinds",
     location: "Home Office",
   },
@@ -476,6 +638,17 @@ export default function GallerySection() {
           </Button>
           <Button
             variant="outline"
+            onClick={() => setFilter("clear-blinds")}
+            className={`min-w-[100px] ${
+              filter === "clear-blinds"
+                ? "bg-[#56bbf1] text-white hover:bg-[#56bbf1]/90"
+                : ""
+            }`}
+          >
+            Clear Strip Blinds
+          </Button>
+          <Button
+            variant="outline"
             onClick={() => setFilter("vertical-blinds")}
             className={`min-w-[100px] ${
               filter === "vertical-blinds"
@@ -527,7 +700,18 @@ export default function GallerySection() {
                 : ""
             }`}
           >
-            Carpets
+            Carpets & Rubber Mats
+          </Button>
+          <Button
+            variant="outline"
+            onClick={() => setFilter("wooden-blinds")}
+            className={`min-w-[100px] ${
+              filter === "wooden-blinds"
+                ? "bg-[#56bbf1] text-white hover:bg-[#56bbf1]/90"
+                : ""
+            }`}
+          >
+            Wooden Blinds
           </Button>
           <Button
             variant="outline"

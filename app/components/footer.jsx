@@ -142,7 +142,7 @@ export default function FooterSection() {
               <ul className="space-y-3">
                 <li className="flex items-start gap-3 text-black">
                   <MapPin className="mt-1 h-5 w-5 shrink-0 text-primary" />
-                  <span>4 floor regal star house north wing</span>
+                  <span>25 George Silundika, 4th floor regal star house north wing, Harare Zimbabwe</span>
                 </li>
                 <li className="flex flex-col  gap-3 text-black">
                   {/* <Phone className="h-5 w-5 shrink-0 text-primary" /> */}

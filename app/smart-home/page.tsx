@@ -18,8 +18,6 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Navbar from "../components/Navbar";
-import FooterSection from "../components/footer";
 
 export default function SmartHomePage() {
   const sectionRef = useRef(null);
@@ -144,7 +142,7 @@ export default function SmartHomePage() {
         <section className="relative overflow-hidden bg-gray-900 py-48 text-white">
           <div className="absolute inset-0 z-0 opacity-30">
             <Image
-              src="/images/smart-home.jpg"
+              src="/images/smart-banner.webp"
               alt="Smart home background"
               fill
               className="object-cover"
@@ -365,14 +363,14 @@ export default function SmartHomePage() {
                 discover the perfect motorized window solutions for your space.
               </p>
               <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-                <Button asChild size="lg" variant="secondary">
+                <Button className="bg-[#56bbf1]" asChild size="lg" variant="secondary">
                   <Link href="/contact">Schedule Consultation</Link>
                 </Button>
                 <Button
                   asChild
                   size="lg"
                   variant="outline"
-                  className="border-white text-white hover:bg-white/10"
+                  className="bg-white border-white text-black hover:text-white hover:bg-white/10"
                 >
                   <Link href="/products">Browse All Products</Link>
                 </Button>
