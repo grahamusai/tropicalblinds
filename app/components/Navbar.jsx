@@ -50,9 +50,9 @@ export default function Navbar() {
             >
               <MapPin className="h-4 w-4 mr-1" />
               <span className="hidden sm:inline ">
-                25 George Silundika Regal Star Hse, 4th Floor North wing
+              4 floor regal star house north wing
               </span>
-              <span className="sm:hidden ">25 George Silundika</span>
+              <span className="sm:hidden ">4 floor regal star house north wing</span>
             </Link>
             
           </div>
@@ -134,12 +134,13 @@ export default function Navbar() {
                 HOME
               </Link>
               <Link
-                href="/about"
-                className="text-gray-600 py-2 px-3 rounded hover:bg-gray-100"
+                href="/smart-home"
+                className="text-gray-600 font-medium py-2 px-3 rounded hover:bg-gray-100"
                 onClick={() => setIsOpen(false)}
               >
-                ABOUT
+                SMART HOME
               </Link>
+              
               <Link
                 href="/products"
                 className="text-gray-600 py-2 px-3 rounded hover:bg-gray-100"
@@ -153,6 +154,13 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
               >
                 GALLERY
+              </Link>
+              <Link
+                href="/about"
+                className="text-gray-600 py-2 px-3 rounded hover:bg-gray-100"
+                onClick={() => setIsOpen(false)}
+              >
+                ABOUT
               </Link>
 
               <Link
