@@ -2,6 +2,7 @@
 
 import { useRef } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { motion, useInView } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Sun, Home, Shield, Ruler } from "lucide-react"
@@ -178,8 +179,11 @@ export default function ProductsSection() {
               {/* Product Info */}
               <div className="flex flex-col justify-center space-y-6">
                 <div>
+                  <Link href="#gallery" className='cursor-pointer'>
                   <h3 className="text-2xl text-[#56bbf1] font-bold">{product.title}</h3>
                   <p className="mt-3 text-gray-600">{product.description}</p>
+                  </Link>
+                  
                 </div>
 
                 {/* Features */}

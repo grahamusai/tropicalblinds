@@ -63,7 +63,7 @@ export default function AboutSection() {
   ]
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-gradient-to-b from-white to-gray-50 py-24">
+    <section  ref={sectionRef} className="relative overflow-hidden bg-gradient-to-b from-white to-gray-50 py-24">
       {/* Decorative elements */}
       <motion.div
         className="absolute -left-16 -top-16 h-64 w-64 rounded-full bg-primary/5"
@@ -147,7 +147,7 @@ export default function AboutSection() {
                 transition={{ duration: 0.7, delay: 0.5 }}
                 className="relative h-[600px] md:h-auto"
                 >
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div id="about"  className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {teamMembers.map((member, index) => (
                   <motion.div
                     key={index}

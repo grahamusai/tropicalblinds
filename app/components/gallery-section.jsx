@@ -7,12 +7,11 @@ import { X, ZoomIn, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const galleryItems = [
-  // Blinds
   {
     id: 1,
     src: "/bamboo/01.jpg",
     alt: "Modern roller blinds in a living room",
-    category: "blinds",
+    category: "all",
     description: "Modern Roller Blinds",
     location: "Contemporary Living Room",
   },
@@ -20,7 +19,7 @@ const galleryItems = [
     id: 2,
     src: "/bamboo/02.jpg",
     alt: "Retractable awning on a patio",
-    category: "blinds",
+    category: "all",
     description: "Retractable Patio Awning",
     location: "Suburban Home",
   },
@@ -28,15 +27,16 @@ const galleryItems = [
     id: 3,
     src: "/bamboo/03.jpg",
     alt: "Venetian blinds in an office",
-    category: "blinds",
+    category: "all",
     description: "Aluminum Venetian Blinds",
     location: "Corporate Office",
   },
+
   {
     id: 4,
     src: "/drop-blinds/01.jpg",
     alt: "Fixed awning for a storefront",
-    category: "blinds",
+    category: "all",
     description: "Commercial Fixed Awning",
     location: "Retail Storefront",
   },
@@ -44,7 +44,7 @@ const galleryItems = [
     id: 5,
     src: "/drop-blinds/02.jpg",
     alt: "Roman blinds in a bedroom",
-    category: "blinds",
+    category: "all",
     description: "Elegant Roman Blinds",
     location: "Master Bedroom",
   },
@@ -52,7 +52,7 @@ const galleryItems = [
     id: 6,
     src: "/panel-blinds/01.jpg",
     alt: "Motorized awning for a restaurant",
-    category: "blinds",
+    category: "all",
     description: "Motorized Restaurant Awning",
     location: "Outdoor Dining Area",
   },
@@ -60,7 +60,7 @@ const galleryItems = [
     id: 7,
     src: "/panel-blinds/02.jpg",
     alt: "Vertical blinds for a sliding door",
-    category: "blinds",
+    category: "all",
     description: "Vertical Blinds",
     location: "Patio Door Installation",
   },
@@ -68,15 +68,16 @@ const galleryItems = [
     id: 8,
     src: "/panel-blinds/03.jpg",
     alt: "Freestanding awning by a pool",
-    category: "blinds",
+    category: "all",
     description: "Freestanding Poolside Awning",
     location: "Luxury Backyard",
   },
+  // Roller Blinds
   {
     id: 9,
     src: "/roller-blinds/01.jpg",
     alt: "Wooden blinds in a study",
-    category: "blinds",
+    category: "roller-blinds",
     description: "Premium Wooden Blinds",
     location: "Home Office",
   },
@@ -84,7 +85,7 @@ const galleryItems = [
     id: 10,
     src: "/roller-blinds/02.jpg",
     alt: "Wooden blinds in a study",
-    category: "blinds",
+    category: "roller-blinds",
     description: "Premium Wooden Blinds",
     location: "Home Office",
   },
@@ -92,23 +93,41 @@ const galleryItems = [
     id: 11,
     src: "/roller-blinds/03.jpg",
     alt: "Wooden blinds in a study",
-    category: "blinds",
+    category: "roller-blinds",
     description: "Premium Wooden Blinds",
     location: "Home Office",
   },
+  // venitian-blinds
   {
     id: 12,
     src: "/venitian-blinds/01.jpg",
     alt: "Wooden blinds in a study",
-    category: "blinds",
+    category: "venitian-blinds",
     description: "Premium Wooden Blinds",
     location: "Home Office",
   },
   {
+    id: 40,
+    src: "/venitian-blinds/02.jpg",
+    alt: "Wooden blinds in a study",
+    category: "venitian-blinds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 41,
+    src: "/venitian-blinds/03.webp",
+    alt: "Wooden blinds in a study",
+    category: "venitian-blinds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  // 127 mm vertical blinds
+  {
     id: 13,
     src: "/vertical-blinds/01.jpg",
     alt: "Wooden blinds in a study",
-    category: "blinds",
+    category: "vertical-blinds",
     description: "Premium Wooden Blinds",
     location: "Home Office",
   },
@@ -116,7 +135,7 @@ const galleryItems = [
     id: 14,
     src: "/vertical-blinds/02.jpg",
     alt: "Wooden blinds in a study",
-    category: "blinds",
+    category: "vertical-blinds",
     description: "Premium Wooden Blinds",
     location: "Home Office",
   },
@@ -124,7 +143,7 @@ const galleryItems = [
     id: 15,
     src: "/vertical-blinds/03.jpg",
     alt: "Wooden blinds in a study",
-    category: "blinds",
+    category: "vertical-blinds",
     description: "Premium Wooden Blinds",
     location: "Home Office",
   },
@@ -132,7 +151,7 @@ const galleryItems = [
     id: 16,
     src: "/vertical-blinds/04.jpg",
     alt: "Wooden blinds in a study",
-    category: "blinds",
+    category: "vertical-blinds",
     description: "Premium Wooden Blinds",
     location: "Home Office",
   },
@@ -140,7 +159,7 @@ const galleryItems = [
     id: 17,
     src: "/vertical-blinds/05.jpg",
     alt: "Wooden blinds in a study",
-    category: "blinds",
+    category: "vertical-blinds",
     description: "Premium Wooden Blinds",
     location: "Home Office",
   },
@@ -435,14 +454,36 @@ export default function GallerySection() {
           </Button>
           <Button
             variant="outline"
-            onClick={() => setFilter("blinds")}
+            onClick={() => setFilter("venitian-blinds")}
             className={`min-w-[100px] ${
-              filter === "blinds"
+              filter === "venitian-blinds"
                 ? "bg-[#56bbf1] text-white hover:bg-[#56bbf1]/90"
                 : ""
             }`}
           >
-            Blinds
+            Venetians blinds
+          </Button>
+          <Button
+            variant="outline"
+            onClick={() => setFilter("roller-blinds")}
+            className={`min-w-[100px] ${
+              filter === "roller-blinds"
+                ? "bg-[#56bbf1] text-white hover:bg-[#56bbf1]/90"
+                : ""
+            }`}
+          >
+            Roller blinds
+          </Button>
+          <Button
+            variant="outline"
+            onClick={() => setFilter("vertical-blinds")}
+            className={`min-w-[100px] ${
+              filter === "vertical-blinds"
+                ? "bg-[#56bbf1] text-white hover:bg-[#56bbf1]/90"
+                : ""
+            }`}
+          >
+            127 mm vertical blinds
           </Button>
           <Button
             variant="outline"
