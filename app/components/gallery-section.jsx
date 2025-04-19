@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { X, ZoomIn, ChevronLeft, ChevronRight } from "lucide-react";
@@ -130,7 +130,7 @@ const galleryItems = [
     description: "Premium Wooden Blinds",
     location: "Home Office",
   },
- 
+
   // 127 mm vertical blinds
   {
     id: 16,
@@ -230,7 +230,7 @@ const galleryItems = [
     description: "Premium Wooden Blinds",
     location: "Home Office",
   },
-  
+
   {
     id: 28,
     src: "/curtains/06.webp",
@@ -510,14 +510,27 @@ const galleryItems = [
 ];
 
 export default function GallerySection() {
-  const [filter, setFilter] = useState("all");
+  const [filter, setFilter] = useState("venitian-blinds");
   const [selectedImage, setSelectedImage] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6; // Show fewer items per page on mobile
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
   const filteredItems = galleryItems.filter(
     (item) => filter === "all" || item.category === filter
   );
+
+  // Calculate pagination
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = filteredItems.slice(indexOfFirstItem, indexOfLastItem);
+  const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
+
+  // Reset page when filter changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [filter]);
 
   // Handle lightbox navigation
   const handlePrevious = () => {
@@ -728,13 +741,13 @@ export default function GallerySection() {
 
         {/* Gallery grid */}
         <motion.div
-          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
           <AnimatePresence mode="wait">
-            {filteredItems.map((item) => (
+            {currentItems.map((item) => (
               <motion.div
                 key={item.id}
                 layout
@@ -752,11 +765,11 @@ export default function GallerySection() {
                     width={800}
                     height={600}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/70 via-black/40 to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  {/* <h3 className="text-xl font-bold text-white">{item.description}</h3> */}
-                  {/* <p className="text-gray-200">{item.location}</p> */}
                   <button
                     onClick={() => setSelectedImage(item)}
                     className="mt-4 flex items-center gap-2 rounded-full bg-white/20 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/30"
@@ -769,6 +782,44 @@ export default function GallerySection() {
             ))}
           </AnimatePresence>
         </motion.div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="mt-8 flex justify-center gap-2">
+            <Button
+              variant="outline"
+              onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+              disabled={currentPage === 1}
+              className="px-3 py-2"
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </Button>
+            <div className="flex items-center gap-2">
+              {Array.from({ length: totalPages }, (_, i) => (
+                <Button
+                  key={i + 1}
+                  variant={currentPage === i + 1 ? "default" : "outline"}
+                  onClick={() => setCurrentPage(i + 1)}
+                  className={`px-3 py-2 ${
+                    currentPage === i + 1
+                      ? "bg-[#56bbf1] text-white hover:bg-[#56bbf1]/90"
+                      : ""
+                  }`}
+                >
+                  {i + 1}
+                </Button>
+              ))}
+            </div>
+            <Button
+              variant="outline"
+              onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+              disabled={currentPage === totalPages}
+              className="px-3 py-2"
+            >
+              <ChevronRight className="h-4 w-4" />
+            </Button>
+          </div>
+        )}
       </div>
 
       {/* Lightbox/Modal */}

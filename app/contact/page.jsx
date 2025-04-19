@@ -409,7 +409,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <h3 className="font-medium">Our Location</h3>
-                        <p className="mt-1 text-gray-600">25 George Silundika Regal Star Hse, 10 th Floor North Wing</p>
+                        <p className="mt-1 text-gray-600">25 George Silundika Regal Star Hse, 4th Floor North Wing</p>
                       </div>
                     </div>
 
@@ -430,8 +430,8 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <h3 className="font-medium">Email Address</h3>
-                        <p className="mt-1 text-gray-600">info@tropicalshades.co.zw</p>
-                        <p className="text-gray-600">sales@tropicalshades.co.zw</p>
+                        <p className="mt-1 text-gray-600">info@tropicalblinds.co.zw</p>
+                        <p className="text-gray-600">sales@trobicalblinds.co.zw</p>
                       </div>
                     </div>
 
@@ -441,8 +441,8 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <h3 className="font-medium">Business Hours</h3>
-                        <p className="mt-1 text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                        <p className="text-gray-600">Saturday: 10:00 AM - 4:00 PM</p>
+                        <p className="mt-1 text-gray-600">Monday - Friday: 8:00 AM - 16:30 PM</p>
+                        <p className="text-gray-600">Saturday: 08:00 AM - 11:00 PM</p>
                         <p className="text-gray-600">Sunday: Closed</p>
                       </div>
                     </div>
