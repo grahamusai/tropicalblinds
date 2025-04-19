@@ -3,14 +3,16 @@ import Image from "next/image"
 export default function AutoScrollingCarousel() {
   // Array of image data with different dimensions for visual variety
   const images = [
-    { src: "/smart/1.jpg", alt: "Image 1", width: 400, height: 300 },
-    { src: "/smart/2.jpg", alt: "Image 2", width: 400, height: 300 },
+    { src: "/smart/10.jpg", alt: "Image 1", width: 400, height: 300 },
+    { src: "/smart/9.jpg", alt: "Image 2", width: 400, height: 300 },
     { src: "/smart/3.jpg", alt: "Image 3", width: 400, height: 300 },
     { src: "/smart/4.jpg", alt: "Image 4", width: 400, height: 300 },
     { src: "/smart/5.jpg", alt: "Image 5", width: 400, height: 300 },
     { src: "/smart/6.jpg", alt: "Image 6", width: 400, height: 300 },
     { src: "/smart/7.jpg", alt: "Image 7", width: 400, height: 300 },
     { src: "/smart/8.jpg", alt: "Image 8", width: 400, height: 300 },
+    { src: "/smart/2.jpg", alt: "Image 9", width: 400, height: 300 },
+    { src: "/smart/1.jpg", alt: "Image 10", width: 400, height: 300 },
   ]
 
   return (
