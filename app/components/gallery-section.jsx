@@ -485,7 +485,7 @@ const galleryItems = [
   },
   {
     id: 58,
-    src: "/wooden-blinds/01.jpg",
+    src: "/wooden-blinds/04.jpg",
     alt: "Wooden blinds in a study",
     category: "wooden-blinds",
     description: "Premium Wooden Blinds",
@@ -493,7 +493,7 @@ const galleryItems = [
   },
   {
     id: 59,
-    src: "/wooden-blinds/02.jpg",
+    src: "/wooden-blinds/05.jpg",
     alt: "Wooden blinds in a study",
     category: "wooden-blinds",
     description: "Premium Wooden Blinds",
@@ -502,6 +502,14 @@ const galleryItems = [
   {
     id: 60,
     src: "/wooden-blinds/03.webp",
+    alt: "Wooden blinds in a study",
+    category: "wooden-blinds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 60,
+    src: "/wooden-blinds/06.webp",
     alt: "Wooden blinds in a study",
     category: "wooden-blinds",
     description: "Premium Wooden Blinds",
