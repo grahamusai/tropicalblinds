@@ -857,14 +857,11 @@ export default function GallerySection() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold">
-                  {selectedImage.description}
-                </h3>
-                <p className="text-gray-600">{selectedImage.location}</p>
+                
                 <p className="mt-2 text-gray-600">
                   {selectedImage.category === "blinds"
-                    ? "Our custom blinds are designed to perfectly fit your windows while complementing your interior design."
-                    : "Our premium awnings provide shade and protection while enhancing the exterior of your property."}
+                    ? "Our custom shades are designed to perfectly fit your windows while complementing your interior design."
+                    : "Our premium shades provide shade and protection while enhancing the exterior of your property."}
                 </p>
               </div>
 
