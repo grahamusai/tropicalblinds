@@ -33,82 +33,108 @@ export default function ProductsSection() {
 
   const products = [
     {
-      category: "Blinds",
-      title: "Premium Window Blinds",
+      category: "Roller Blinds",
+      title: "Premium Roller Blinds",
       description:
-        "Our custom window blinds combine functionality with style. Available in various materials, colors, and opacities to perfectly match your interior design.",
-      image: "/images/feature-blinds.jpeg",
+        "Modern, versatile, and easy to operate, our roller blinds offer the perfect balance of light control and style. Ideal for both residential and commercial spaces.",
+      image: "/roller-blinds/01.jpg",
       features: [
-        { icon: <Sun className="h-5 w-5" />, text: "UV Protection" },
-        { icon: <Home className="h-5 w-5" />, text: "Energy Efficient" },
-        { icon: <Ruler className="h-5 w-5" />, text: "Custom Sizes" },
+        { icon: <Sun className="h-5 w-5" />, text: "Light Control" },
+        { icon: <Home className="h-5 w-5" />, text: "Easy Operation" },
+        { icon: <Ruler className="h-5 w-5" />, text: "Custom Fit" },
       ],
-      variants: ["Vertical Blinds", "Aluminium Venetians", "Roller Blinds", "Wooden Blinds", "Bamboo Blinds", "Roman Blinds"],
+      variants: ["Blackout", "Light Filtering", "Sunscreen", "Double Roller", "Motorized", "Chain Operated"],
+    },
+    {
+      category: "Clear Strip Blinds",
+      title: "Clear PVC Strip Solutions",
+      description:
+        "Perfect for commercial spaces, our clear strip blinds provide weather protection while maintaining visibility. Ideal for warehouses, industrial spaces, and outdoor areas.",
+      image: "/clear/01.jpg",
+      features: [
+        { icon: <Shield className="h-5 w-5" />, text: "Weather Protection" },
+        { icon: <Sun className="h-5 w-5" />, text: "Clear Visibility" },
+        { icon: <Ruler className="h-5 w-5" />, text: "Industrial Grade" },
+      ],
+      variants: ["Standard PVC", "Ribbed PVC", "Polar Grade", "Anti-Static", "UV Stabilized", "Various Widths"],
+    },
+    {
+      category: "Vertical Blinds",
+      title: "127mm Vertical Blinds",
+      description:
+        "Our 127mm vertical blinds offer superior light control and privacy. Perfect for large windows and sliding doors, combining functionality with contemporary style.",
+      image: "/vertical-blinds/01.jpg",
+      features: [
+        { icon: <Sun className="h-5 w-5" />, text: "Precision Control" },
+        { icon: <Shield className="h-5 w-5" />, text: "UV Protection" },
+        { icon: <Ruler className="h-5 w-5" />, text: "Easy Maintenance" },
+      ],
+      variants: ["Block-Out", "Light Filter", "Textured", "Plain", "Perforated", "Metallic"],
     },
     {
       category: "Awnings",
-      title: "Outdoor Awning Solutions",
+      title: "Custom Awning Solutions",
       description:
-        "Transform your outdoor space with our durable, weather-resistant awnings. Perfect for patios, decks, and commercial spaces to provide shade and style.",
+        "Transform your outdoor space with our premium awnings. Designed for both residential and commercial applications, providing shade and style for any exterior.",
       image: "/images/awnings-feature.jpg",
       features: [
-        { icon: <Shield className="h-5 w-5" />, text: "Weather Resistant" },
-        { icon: <Sun className="h-5 w-5" />, text: "UV Protection" },
-        { icon: <Ruler className="h-5 w-5" />, text: "Custom Designs" },
+        { icon: <Shield className="h-5 w-5" />, text: "All-Weather" },
+        { icon: <Sun className="h-5 w-5" />, text: "UV Resistant" },
+        { icon: <Ruler className="h-5 w-5" />, text: "Custom Design" },
       ],
-      variants: ["Retractable Awnings", "Fixed Awnings", "Freestanding Awnings", "Motorized Systems"],
+      variants: ["Fixed", "Retractable", "Folding Arm", "Drop Arm", "Conservatory", "Motorized"],
     },
     {
       category: "Curtains",
-      title: "Elegant Custom Curtains",
+      title: "Luxury Curtain Collection",
       description:
-        "Add luxury and sophistication to your windows with our custom curtain collection. From sheer to blackout, our curtains offer both beauty and functionality for any room.",
-      image: "/images/curtains.jpg",
+        "Elevate your interior with our premium curtain collection. From sheer elegance to full blackout, our curtains combine luxury fabrics with expert craftsmanship.",
+      image: "/curtains/01.png",
       features: [
         { icon: <Shield className="h-5 w-5" />, text: "Premium Fabrics" },
-        { icon: <Sun className="h-5 w-5" />, text: "Light Control" },
-        { icon: <Ruler className="h-5 w-5" />, text: "Made to Measure" },
+        { icon: <Sun className="h-5 w-5" />, text: "Perfect Drape" },
+        { icon: <Ruler className="h-5 w-5" />, text: "Custom Made" },
       ],
-      variants: ["Sheer Curtains", "Blackout Curtains", "Day & Night Curtains", "Wave Curtains", "Eyelet Curtains", "Pinch Pleat", "Decorative Tracks"],
+      variants: ["Sheer", "Blockout", "Lined", "Wave Pleat", "Pinch Pleat", "Eyelet", "S-Fold"],
     },
     {
       category: "Car Shades",
-      title: "Automotive Sun Solutions",
+      title: "Automotive Shade Solutions",
       description:
-        "Protect your vehicle's interior and maintain comfort with our premium car shade solutions. Custom-fitted for various vehicle models to ensure perfect coverage.",
-      image: "/images/car-shade4.jpg",
+        "Protect your vehicle interior with our premium car shades. Custom-fitted for all vehicle makes and models, providing superior UV protection and heat reduction.",
+      image: "/car-shades/01.jpg",
       features: [
-        { icon: <Shield className="h-5 w-5" />, text: "Heat Reduction" },
-        { icon: <Sun className="h-5 w-5" />, text: "99% UV Block" },
-        { icon: <Ruler className="h-5 w-5" />, text: "Perfect Fit" },
-      ],
-      variants: ["Magnetic Shades", "Custom Roll-up Shades", "Window Tinting", "Windshield Sunshades", "Full Car Sets", "Privacy Shades"],
-    },
-    {
-      category: "Carpets",
-      title: "Premium Carpet Solutions",
-      description:
-        "Enhance your space with our extensive range of carpets. From luxurious residential carpets to durable commercial solutions, we offer quality materials and expert installation.",
-      image: "/images/carpets0.jpg",
-      features: [
-        { icon: <Shield className="h-5 w-5" />, text: "Stain Resistant" },
-        { icon: <Sun className="h-5 w-5" />, text: "Long Lasting" },
-        { icon: <Ruler className="h-5 w-5" />, text: "Professional Install" },
-      ],
-      variants: ["Wall-to-Wall Carpets", "Area Rugs", "Commercial Carpets", "Wool Carpets", "Synthetic Carpets", "Designer Collections", "Outdoor Carpets"],
-    },
-    {
-      category: "Shutters",
-      title: "Classic Window Shutters",
-      description:
-        "Experience timeless elegance with our premium window shutters. Combining traditional charm with modern functionality, our shutters provide perfect light control and privacy.",
-      image: "/shutters/02.jpg",
-      features: [
-        { icon: <Shield className="h-5 w-5" />, text: "Durable Build" },
-        { icon: <Sun className="h-5 w-5" />, text: "Light Control" },
+        { icon: <Shield className="h-5 w-5" />, text: "UV Blocking" },
+        { icon: <Sun className="h-5 w-5" />, text: "Heat Reduction" },
         { icon: <Ruler className="h-5 w-5" />, text: "Custom Fit" },
       ],
-      variants: ["Plantation Shutters", "Wooden Shutters", "PVC Shutters", "Cafe Style", "Full Height", "Tier-on-Tier", "Security Shutters"],
+      variants: ["Magnetic", "Static Cling", "Roll-Up", "Custom Cut", "Full Set", "Privacy"],
+    },
+    {
+      category: "Floor Solutions",
+      title: "Carpets & Rubber Mats",
+      description:
+        "Complete flooring solutions including premium carpets and durable rubber mats. Perfect for homes, offices, and commercial spaces, offering comfort and practicality.",
+      image: "/carpets/01.jpg",
+      features: [
+        { icon: <Shield className="h-5 w-5" />, text: "Stain Resistant" },
+        { icon: <Home className="h-5 w-5" />, text: "Durability" },
+        { icon: <Ruler className="h-5 w-5" />, text: "Professional Install" },
+      ],
+      variants: ["Wall-to-Wall", "Area Rugs", "Commercial Grade", "Anti-Fatigue Mats", "Entrance Mats", "Custom Design"],
+    },
+    {
+      category: "Wooden Blinds",
+      title: "Wooden Blinds & Shutters",
+      description:
+        "Add warmth and sophistication to your space with our wooden blinds and shutters. Crafted from premium materials for lasting beauty and functionality.",
+      image: "/wooden-blinds/01.jpg",
+      features: [
+        { icon: <Shield className="h-5 w-5" />, text: "Natural Beauty" },
+        { icon: <Sun className="h-5 w-5" />, text: "Insulation" },
+        { icon: <Ruler className="h-5 w-5" />, text: "Made to Measure" },
+      ],
+      variants: ["Basswood", "Cedar", "Plantation Shutters", "Security Shutters", "Venetian Style", "Custom Finish"],
     },
   ]
 
