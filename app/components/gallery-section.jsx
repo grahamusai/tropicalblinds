@@ -189,6 +189,30 @@ const galleryItems = [
     description: "Premium Wooden Blinds",
     location: "Home Office",
   },
+  {
+    id: 61,
+    src: "/awnings/03.jpg",
+    alt: "Wooden blinds in a study",
+    category: "awnings",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 62,
+    src: "/awnings/04.jpg",
+    alt: "Wooden blinds in a study",
+    category: "awnings",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 63,
+    src: "/awnings/05.jpg",
+    alt: "Wooden blinds in a study",
+    category: "awnings",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
   // Curtains
   {
     id: 23,
