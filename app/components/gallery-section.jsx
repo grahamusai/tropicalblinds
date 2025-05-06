@@ -560,7 +560,47 @@ const galleryItems = [
     category: "zebra",
     description: "Designer Wooden Blinds",
     location: "Executive Suite",
-  }
+  },
+  {
+    id: 69,
+    src: "/bamboo/01.jpg",
+    alt: "Designer wooden blind collection",
+    category: "bamboo",
+    description: "Designer Wooden Blinds",
+    location: "Executive Suite",
+  },
+  {
+    id: 70,
+    src: "/bamboo/02.jpg",
+    alt: "Designer wooden blind collection",
+    category: "bamboo",
+    description: "Designer Wooden Blinds",
+    location: "Executive Suite",
+  },
+  {
+    id: 71,
+    src: "/bamboo/03.jpg",
+    alt: "Designer wooden blind collection",
+    category: "bamboo",
+    description: "Designer Wooden Blinds",
+    location: "Executive Suite",
+  },
+  {
+    id: 72,
+    src: "/bamboo/04.jpg",
+    alt: "Designer wooden blind collection",
+    category: "bamboo",
+    description: "Designer Wooden Blinds",
+    location: "Executive Suite",
+  },
+  {
+    id: 73,
+    src: "/bamboo/05.jpg",
+    alt: "Designer wooden blind collection",
+    category: "bamboo",
+    description: "Designer Wooden Blinds",
+    location: "Executive Suite",
+  },
 ];
 
 export default function GallerySection() {
@@ -801,6 +841,17 @@ export default function GallerySection() {
             }`}
           >
             Zebra Blinds
+          </Button>
+          <Button
+            variant="outline"
+            onClick={() => setFilter("bamboo")}
+            className={`min-w-[100px] ${
+              filter === "bamboo"
+                ? "bg-[#56bbf1] text-white hover:bg-[#56bbf1]/90"
+                : ""
+            }`}
+          >
+            Bamboo Blinds
           </Button>
         </motion.div>
 
