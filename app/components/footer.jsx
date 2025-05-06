@@ -173,7 +173,7 @@ export default function FooterSection() {
           <div className="flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
             <p className="text-sm text-black">© {currentYear} Tropical Shades. All rights reserved.</p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-black">
-              
+              | Developed by Graham
             </div>
           </div>
         </motion.div>

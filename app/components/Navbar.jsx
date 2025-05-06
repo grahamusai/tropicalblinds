@@ -112,7 +112,7 @@ export default function Navbar() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link
-              href="/documents/profile.pdf"
+              href="/documents/tropical-blinds-profile-new.pdf"
               target="_blank"
               className="bg-blue-400  hover:bg-blue-500 text-white px-4 py-2 gap-0.5 flex items-center"
             >

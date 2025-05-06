@@ -124,11 +124,24 @@ export default function ProductsSection() {
       variants: ["Wall-to-Wall", "Area Rugs", "Commercial Grade", "Anti-Fatigue Mats", "Entrance Mats", "Custom Design"],
     },
     {
+      category: "Zebra Blinds",
+      title: "Zebra Blinds",
+      description:
+        "Add warmth and sophistication to your space with our wooden blinds and shutters. Crafted from premium materials for lasting beauty and functionality.",
+      image: "/wooden-blinds/01.jpg",
+      features: [
+        { icon: <Shield className="h-5 w-5" />, text: "Natural Beauty" },
+        { icon: <Sun className="h-5 w-5" />, text: "Insulation" },
+        { icon: <Ruler className="h-5 w-5" />, text: "Made to Measure" },
+      ],
+      variants: ["Basswood", "Cedar", "Plantation Shutters", "Security Shutters", "Venetian Style", "Custom Finish"],
+    },
+    {
       category: "Wooden Blinds",
       title: "Wooden Blinds & Shutters",
       description:
         "Add warmth and sophistication to your space with our wooden blinds and shutters. Crafted from premium materials for lasting beauty and functionality.",
-      image: "/wooden-blinds/01.jpg",
+      image: "/wooden-blinds/06.jpg",
       features: [
         { icon: <Shield className="h-5 w-5" />, text: "Natural Beauty" },
         { icon: <Sun className="h-5 w-5" />, text: "Insulation" },
