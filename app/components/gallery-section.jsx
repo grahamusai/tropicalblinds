@@ -99,7 +99,7 @@ const galleryItems = [
   // Venetian blinds
   {
     id: 12,
-    src: "/venitian-blinds/01.jpg",
+    src: "/venitian-blinds/1.webp",
     alt: "Wooden blinds in a study",
     category: "venitian-blinds",
     description: "Premium Wooden Blinds",
@@ -520,6 +520,46 @@ const galleryItems = [
     category: "wooden-blinds",
     description: "Designer Wooden Blinds",
     location: "Executive Suite",
+  },
+  {
+    id: 64,
+    src: "/zebra/01.jpg",
+    alt: "Designer wooden blind collection",
+    category: "zebra",
+    description: "Designer Wooden Blinds",
+    location: "Executive Suite",
+  },
+  {
+    id: 65,
+    src: "/zebra/02.jpg",
+    alt: "Designer wooden blind collection",
+    category: "zebra",
+    description: "Designer Wooden Blinds",
+    location: "Executive Suite",
+  },
+  {
+    id: 66,
+    src: "/zebra/03.jpg",
+    alt: "Designer wooden blind collection",
+    category: "zebra",
+    description: "Designer Wooden Blinds",
+    location: "Executive Suite",
+  },
+  {
+    id: 67,
+    src: "/zebra/04.jpg",
+    alt: "Designer wooden blind collection",
+    category: "zebra",
+    description: "Designer Wooden Blinds",
+    location: "Executive Suite",
+  },
+  {
+    id: 68,
+    src: "/zebra/05.jpg",
+    alt: "Designer wooden blind collection",
+    category: "zebra",
+    description: "Designer Wooden Blinds",
+    location: "Executive Suite",
   }
 ];
 
@@ -738,7 +778,7 @@ export default function GallerySection() {
                 : ""
             }`}
           >
-            Zebra blinds 
+            Wooden Blinds 
           </Button>
           <Button
             variant="outline"
@@ -750,6 +790,17 @@ export default function GallerySection() {
             }`}
           >
             Shutters
+          </Button>
+          <Button
+            variant="outline"
+            onClick={() => setFilter("zebra")}
+            className={`min-w-[100px] ${
+              filter === "zebra"
+                ? "bg-[#56bbf1] text-white hover:bg-[#56bbf1]/90"
+                : ""
+            }`}
+          >
+            Zebra Blinds
           </Button>
         </motion.div>
 
@@ -865,9 +916,7 @@ export default function GallerySection() {
               <div className="p-6">
                 
                 <p className="mt-2 text-gray-600">
-                  {selectedImage.category === "blinds"
-                    ? "Our custom shades are designed to perfectly fit your windows while complementing your interior design."
-                    : "Our premium shades provide shade and protection while enhancing the exterior of your property."}
+                  Discover the perfect blend of style and functionality with our premium blinds, curtains, awnings, shades, and carpets, designed to elevate any space with elegance and practicality.
                 </p>
               </div>
 

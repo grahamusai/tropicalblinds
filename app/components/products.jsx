@@ -127,18 +127,18 @@ export default function ProductsSection() {
       category: "Zebra Blinds",
       title: "Zebra Blinds",
       description:
-        "Add warmth and sophistication to your space with our wooden blinds and shutters. Crafted from premium materials for lasting beauty and functionality.",
+        "Experience the perfect balance of light and privacy with our zebra blinds. Featuring alternating sheer and solid fabric bands, these modern window treatments offer precise light control and elegant styling.",
       image: "/wooden-blinds/01.jpg",
       features: [
-        { icon: <Shield className="h-5 w-5" />, text: "Natural Beauty" },
-        { icon: <Sun className="h-5 w-5" />, text: "Insulation" },
-        { icon: <Ruler className="h-5 w-5" />, text: "Made to Measure" },
+        { icon: <Sun className="h-5 w-5" />, text: "Precise Light Control" },
+        { icon: <Shield className="h-5 w-5" />, text: "Easy to Clean" },
+        { icon: <Ruler className="h-5 w-5" />, text: "Custom Fit" },
       ],
-      variants: ["Basswood", "Cedar", "Plantation Shutters", "Security Shutters", "Venetian Style", "Custom Finish"],
+      variants: ["Motorized", "Chain Operated", "Cordless", "Blackout", "Light Filtering", "Double Layer"],
     },
     {
       category: "Wooden Blinds",
-      title: "Wooden Blinds & Shutters",
+      title: "Wooden Blinds",
       description:
         "Add warmth and sophistication to your space with our wooden blinds and shutters. Crafted from premium materials for lasting beauty and functionality.",
       image: "/wooden-blinds/06.jpg",
@@ -148,6 +148,19 @@ export default function ProductsSection() {
         { icon: <Ruler className="h-5 w-5" />, text: "Made to Measure" },
       ],
       variants: ["Basswood", "Cedar", "Plantation Shutters", "Security Shutters", "Venetian Style", "Custom Finish"],
+    },
+    {
+      category: "Shutters",
+      title: "Premium Interior Shutters",
+      description:
+        "Elevate your space with our premium interior shutters. Combining timeless elegance with superior functionality, our shutters offer perfect light control, enhanced privacy, and excellent insulation properties.",
+      image: "/shutters/01.jpg",
+      features: [
+        { icon: <Shield className="h-5 w-5" />, text: "Premium Quality" },
+        { icon: <Sun className="h-5 w-5" />, text: "Light Control" },
+        { icon: <Ruler className="h-5 w-5" />, text: "Custom Fit" },
+      ],
+      variants: ["Plantation Style", "Traditional", "Modern", "Security Shutters", "Aluminum", "Wood Composite"],
     },
   ]
 
