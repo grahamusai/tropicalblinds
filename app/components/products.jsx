@@ -304,7 +304,7 @@ export default function ProductsSection() {
             business.
           </p>
           <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row justify-center gap-2 sm:gap-4">
-            <Button size="lg" className="bg-black hover:bg-blue-600 text-sm sm:text-base">Request a Consultation</Button>
+            <Link href="https://wa.me/+263772237348" className="flex justify-center items-center bg-black hover:bg-blue-600 transition text-white rounded-md px-3 text-sm sm:text-base">Request a Consultation</Link>
             <Button variant="outline" size="lg" className="bg-white text-sm sm:text-base">
               View All Products
             </Button>

@@ -40,7 +40,7 @@ export default function Navbar() {
             <Phone className="h-4 w-4" />
             <span className="hidden sm:inline">Call us at</span>
             <a href="tel:+263242721060 " className="hover:underline ">
-            +263 242 721 060 /  + 263 772211411
+            +263 242 721 060 /  + 263 772 211 411
             </a>
           </div>
           <div className="flex items-center space-x-4 md:space-x-6">
