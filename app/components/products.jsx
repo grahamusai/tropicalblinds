@@ -193,25 +193,19 @@ export default function ProductsSection() {
   return (
     <section id="products" ref={sectionRef} className="relative overflow-hidden bg-gradient-to-b from-gray-50 to-white py-12 sm:py-24">
       {/* Decorative elements */}
-      <motion.div
+      <div
         className="absolute hidden sm:-right-16 sm:top-32 sm:h-64 sm:w-64 sm:block rounded-full bg-primary/5"
-        initial={{ scale: 0 }}
-        animate={isInView ? { scale: 1 } : { scale: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
+       
       />
-      <motion.div
+      <div
         className="absolute hidden sm:-left-32 sm:bottom-32 sm:h-96 sm:w-96 sm:block rounded-full bg-primary/5"
-        initial={{ scale: 0 }}
-        animate={isInView ? { scale: 1 } : { scale: 0 }}
-        transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+       
       />
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
+        <div
           className="mb-8 sm:mb-16 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.7 }}
+         
         >
           <h2 className="text-2xl sm:text-4xl md:text-5xl text-gray-600 font-bold tracking-tight">
             Our <span className="text-[#56bbf1]">Products</span>
@@ -220,26 +214,25 @@ export default function ProductsSection() {
             Discover our premium range of blinds and awnings, designed to enhance your space with style and
             functionality.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
+        <div
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           className="space-y-12 sm:space-y-24"
         >
           {products.map((product, index) => (
-            <motion.div
+            <div
               key={product.category}
               variants={itemVariants}
               className={`grid gap-4 sm:gap-8 md:grid-cols-2 ${index % 2 === 1 ? "md:grid-flow-dense" : ""}`}
             >
               {/* Product Image with animation */}
               <div className={`${index % 2 === 1 ? "md:col-start-2" : ""}`}>
-                <motion.div
+                <div
                   className="relative overflow-hidden rounded-xl"
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ duration: 0.3 }}
+                
                 >
                   <Image
                     src={product.image || "/images/feature-blinds.jpeg"}
@@ -252,7 +245,7 @@ export default function ProductsSection() {
                   <div className="absolute bg-[#56bbf1] left-2 sm:left-4 top-2 sm:top-4 rounded-full px-3 sm:px-4 py-1 text-xs sm:text-sm font-medium text-white">
                     {product.category}
                   </div>
-                </motion.div>
+                </div>
               </div>
 
               {/* Product Info */}
@@ -269,15 +262,14 @@ export default function ProductsSection() {
                   <h4 className="text-sm sm:text-base font-medium">Key Features</h4>
                   <div className="flex flex-wrap gap-2 sm:gap-4">
                     {product.features.map((feature, i) => (
-                      <motion.div
+                      <div
                         key={i}
                         className="flex items-center gap-1 sm:gap-2 rounded-lg bg-gray-50 px-2 sm:px-3 py-1 sm:py-2 text-sm"
-                        whileHover={{ y: -5 }}
-                        transition={{ type: "spring", stiffness: 300 }}
+                       
                       >
                         <span className="text-primary">{feature.icon}</span>
                         <span className="text-xs sm:text-sm">{feature.text}</span>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -287,27 +279,24 @@ export default function ProductsSection() {
                   <h4 className="text-sm sm:text-base font-medium">Available Options</h4>
                   <div className="grid grid-cols-2 gap-1.5 sm:gap-2">
                     {product.variants.map((variant, i) => (
-                      <motion.div
+                      <div
                         key={i}
                         className="rounded-md border border-gray-200 px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm"
-                        whileHover={{ backgroundColor: "#f9fafb" }}
                       >
                         {variant}
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Call to action */}
-        <motion.div
+        <div
           className="mx-auto mt-12 sm:mt-24 max-w-3xl rounded-xl bg-[#56bbf1] p-4 sm:p-8 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.7, delay: 0.5 }}
+          
         >
           <h3 className="text-xl sm:text-2xl font-bold text-white">Custom Solutions For Your Space</h3>
           <p className="mx-auto mt-2 sm:mt-3 max-w-xl text-sm sm:text-base text-white/90">
@@ -320,7 +309,7 @@ export default function ProductsSection() {
               View All Products
             </Button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )
