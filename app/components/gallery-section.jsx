@@ -210,6 +210,14 @@ const galleryItems = [
     description: "Premium Wooden Blinds",
     location: "Home Office",
   },
+  {
+    id: 92,
+    src: "/vertical-blinds/06.jpg",
+    alt: "Wooden blinds in a study",
+    category: "vertical-blinds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
   // Awnings
   {
     id: 21,
