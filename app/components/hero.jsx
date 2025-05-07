@@ -35,7 +35,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            Tropical Shades is a registered company in Zimbabwe which specializes in blinds, curtains, car-sheds, carpets and awnings.
+            Tropical Shades is a registered company in Zimbabwe which specializes in blinds, curtains, car-sheds, carpets, shutters, car sheds and awnings.
           </motion.p>
 
           <motion.div

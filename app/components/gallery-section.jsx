@@ -74,7 +74,7 @@ const galleryItems = [
   // Roller Blinds
   {
     id: 9,
-    src: "/roller-blinds/01.jpg",
+    src: "/new-roller/01.jpg",
     alt: "Wooden blinds in a study",
     category: "roller-blinds",
     description: "Premium Wooden Blinds",
@@ -82,7 +82,7 @@ const galleryItems = [
   },
   {
     id: 10,
-    src: "/roller-blinds/02.jpg",
+    src: "/new-roller/02.jpg",
     alt: "Wooden blinds in a study",
     category: "roller-blinds",
     description: "Premium Wooden Blinds",
@@ -90,7 +90,31 @@ const galleryItems = [
   },
   {
     id: 11,
-    src: "/roller-blinds/03.jpg",
+    src: "/new-roller/03.jpg",
+    alt: "Wooden blinds in a study",
+    category: "roller-blinds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 86,
+    src: "/new-roller/04.jpeg",
+    alt: "Wooden blinds in a study",
+    category: "roller-blinds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 87,
+    src: "/new-roller/05.jpg",
+    alt: "Wooden blinds in a study",
+    category: "roller-blinds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 88,
+    src: "/new-roller/06.png",
     alt: "Wooden blinds in a study",
     category: "roller-blinds",
     description: "Premium Wooden Blinds",
@@ -124,6 +148,22 @@ const galleryItems = [
   {
     id: 15,
     src: "/venitian-blinds/04.jpg",
+    alt: "Wooden blinds in a study",
+    category: "venitian-blinds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 89,
+    src: "/venitian-blinds/05.jpg",
+    alt: "Wooden blinds in a study",
+    category: "venitian-blinds",
+    description: "Premium Wooden Blinds",
+    location: "Home Office",
+  },
+  {
+    id: 90,
+    src: "/venitian-blinds/06.jpg",
     alt: "Wooden blinds in a study",
     category: "venitian-blinds",
     description: "Premium Wooden Blinds",
@@ -206,6 +246,14 @@ const galleryItems = [
   {
     id: 25,
     src: "/awnings/05.jpg",
+    alt: "Custom awning installation",
+    category: "awnings",
+    description: "Custom Fit Awning",
+    location: "Mixed-Use Property",
+  },
+  {
+    id: 91,
+    src: "/awnings/06.jpg",
     alt: "Custom awning installation",
     category: "awnings",
     description: "Custom Fit Awning",
@@ -601,6 +649,102 @@ const galleryItems = [
     description: "Designer Wooden Blinds",
     location: "Executive Suite",
   },
+  {
+    id: 74,
+    src: "/panel-blinds/01.jpg",
+    alt: "Designer wooden blind collection",
+    category: "panel-blinds",
+    description: "Designer Wooden Blinds",
+    location: "Executive Suite",
+  },
+  {
+    id: 75,
+    src: "/panel-blinds/02.jpg",
+    alt: "Designer wooden blind collection",
+    category: "panel-blinds",
+    description: "Designer Wooden Blinds",
+    location: "Executive Suite",
+  },
+  {
+    id: 76,
+    src: "/panel-blinds/03.jpg",
+    alt: "Designer wooden blind collection",
+    category: "panel-blinds",
+    description: "Designer Wooden Blinds",
+    location: "Executive Suite",
+  },
+  {
+    id: 77,
+    src: "/panel-blinds/04.jpeg",
+    alt: "Designer wooden blind collection",
+    category: "panel-blinds",
+    description: "Designer Wooden Blinds",
+    location: "Executive Suite",
+  },
+  {
+    id: 78,
+    src: "/panel-blinds/05.jpg",
+    alt: "Designer wooden blind collection",
+    category: "panel-blinds",
+    description: "Designer Wooden Blinds",
+    location: "Executive Suite",
+  },
+  {
+    id: 79,
+    src: "/panel-blinds/06.jpg",
+    alt: "Designer wooden blind collection",
+    category: "panel-blinds",
+    description: "Designer Wooden Blinds",
+    location: "Executive Suite",
+  },
+  {
+    id: 80,
+    src: "/roman/01.jpg",
+    alt: "Designer wooden blind collection",
+    category: "roman",
+    description: "Designer Wooden Blinds",
+    location: "Executive Suite",
+  },
+  {
+    id: 81,
+    src: "/roman/02.jpg",
+    alt: "Designer wooden blind collection",
+    category: "roman",
+    description: "Designer Wooden Blinds",
+    location: "Executive Suite",
+  },
+  {
+    id: 82,
+    src: "/roman/03.jpg",
+    alt: "Designer wooden blind collection",
+    category: "roman",
+    description: "Designer Wooden Blinds",
+    location: "Executive Suite",
+  },
+  {
+    id: 83,
+    src: "/roman/04.webp",
+    alt: "Designer wooden blind collection",
+    category: "roman",
+    description: "Designer Wooden Blinds",
+    location: "Executive Suite",
+  },
+  {
+    id: 84,
+    src: "/roman/05.jpg",
+    alt: "Designer wooden blind collection",
+    category: "roman",
+    description: "Designer Wooden Blinds",
+    location: "Executive Suite",
+  },
+  {
+    id: 85,
+    src: "/roman/06.jpg",
+    alt: "Designer wooden blind collection",
+    category: "roman",
+    description: "Designer Wooden Blinds",
+    location: "Executive Suite",
+  },
 ];
 
 export default function GallerySection() {
@@ -767,6 +911,17 @@ export default function GallerySection() {
           </Button>
           <Button
             variant="outline"
+            onClick={() => setFilter("panel-blinds")}
+            className={`min-w-[100px] ${
+              filter === "panel-blinds"
+                ? "bg-[#56bbf1] text-white hover:bg-[#56bbf1]/90"
+                : ""
+            }`}
+          >
+            Panel blinds
+          </Button>
+          <Button
+            variant="outline"
             onClick={() => setFilter("awnings")}
             className={`min-w-[100px] ${
               filter === "awnings"
@@ -852,6 +1007,17 @@ export default function GallerySection() {
             }`}
           >
             Bamboo Blinds
+          </Button>
+          <Button
+            variant="outline"
+            onClick={() => setFilter("roman")}
+            className={`min-w-[100px] ${
+              filter === "roman"
+                ? "bg-[#56bbf1] text-white hover:bg-[#56bbf1]/90"
+                : ""
+            }`}
+          >
+            Roman Blinds
           </Button>
         </motion.div>
 

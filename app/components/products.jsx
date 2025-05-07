@@ -5,7 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion, useInView } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Sun, Home, Shield, Ruler } from "lucide-react"
+import { Sun, Home, Shield, Ruler } from "lucide-react"
 
 export default function ProductsSection() {
   const sectionRef = useRef(null)
@@ -161,6 +161,32 @@ export default function ProductsSection() {
         { icon: <Ruler className="h-5 w-5" />, text: "Custom Fit" },
       ],
       variants: ["Plantation Style", "Traditional", "Modern", "Security Shutters", "Aluminum", "Wood Composite"],
+    },
+    {
+      category: "Panel Blinds",
+      title: "Panel Blinds",
+      description:
+        "Elegant panel blinds offering a contemporary solution for large windows and sliding doors. Perfect for room dividers and patio doors, combining style with practical functionality.",
+      image: "/panel-blinds/01.jpg",
+      features: [
+        { icon: <Sun className="h-5 w-5" />, text: "Light Control" },
+        { icon: <Home className="h-5 w-5" />, text: "Room Division" },
+        { icon: <Ruler className="h-5 w-5" />, text: "Wide Coverage" },
+      ],
+      variants: ["Blockout", "Light Filter", "Screen", "Decorative", "Translucent", "Patterned"],
+    },
+    {
+      category: "Roman Blinds",
+      title: "Classic Roman Blinds",
+      description:
+        "Timeless roman blinds that combine the softness of curtains with the practicality of blinds. Perfect for creating a luxurious, tailored look in any room.",
+      image: "/roman/01.jpg",
+      features: [
+        { icon: <Shield className="h-5 w-5" />, text: "Elegant Design" },
+        { icon: <Sun className="h-5 w-5" />, text: "Soft Lighting" },
+        { icon: <Ruler className="h-5 w-5" />, text: "Custom Made" },
+      ],
+      variants: ["Flat Style", "Hobbled", "Relaxed", "Lined", "Blackout", "Motorized"],
     },
   ]
 
