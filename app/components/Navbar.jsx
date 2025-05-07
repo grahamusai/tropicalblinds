@@ -40,7 +40,7 @@ export default function Navbar() {
             <Phone className="h-4 w-4" />
             <span className="hidden sm:inline">Call us at</span>
             <a href="tel:+263242721060 " className="hover:underline ">
-            +263 242 721 060 
+            +263 242 721 060 /  + 263 772211411
             </a>
           </div>
           <div className="flex items-center space-x-4 md:space-x-6">
@@ -171,7 +171,7 @@ export default function Navbar() {
                 CONTACT US
               </Link>
               <Link
-                href="/documents/profile.pdf"
+                href="/documents/tropical-blinds-profile-new.pdf"
                 target="_blank"
                 className="bg-blue-400  hover:bg-blue-500 text-white px-4 py-2 gap-0.5 flex items-center justify-center"
               >
