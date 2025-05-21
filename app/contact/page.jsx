@@ -431,7 +431,7 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-medium">Email Address</h3>
                         <p className="mt-1 text-gray-600">info@tropicalblinds.co.zw</p>
-                        <p className="text-gray-600">sales@trobicalblinds.co.zw</p>
+                        <p className="text-gray-600">sales@tropicalblinds.co.zw</p>
                       </div>
                     </div>
 
